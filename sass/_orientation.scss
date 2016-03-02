@@ -1,0 +1,15 @@
+.portrait {
+  display: none;
+}
+.landscape {
+  display: block;
+}
+
+@media all and (orientation:portrait) {
+  .portrait {
+    display: block;
+  }
+  .landscape {
+    display: none;
+  }
+}

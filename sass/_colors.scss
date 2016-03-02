@@ -1,0 +1,52 @@
+.btn, .btn:hover, .btn:focus {
+  color: white;
+}
+
+.total {
+  background-color: white;
+  border: 1vmin solid black;
+  color: black;
+}
+
+@mixin btnColors($color) {
+  .btn, &.btn {
+    background-color: $color;
+    &:hover {
+      background-color: darken($color, 10%);
+    }
+
+    &.marked, &.locked, &.failed {
+      background-color: darken($color, 30%);
+      &:hover {
+        background-color: darken($color, 40%);
+      }
+    }
+
+    &.skipped {
+      background-color: lighten($color, 20%);
+      &:hover {
+        background-color: lighten($color, 10%);
+      }
+    }
+  }
+}
+
+.red {
+  @include btnColors(#d9534f);
+}
+
+.yellow {
+  @include btnColors(#f0ad4e);
+}
+
+.green {
+  @include btnColors(#5cb85c);
+}
+
+.blue {
+  @include btnColors(#337ab7);
+}
+
+.fails {
+  @include btnColors(#aeaeae);
+}

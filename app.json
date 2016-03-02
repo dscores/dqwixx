@@ -1,0 +1,6 @@
+{
+  "name": "dqwixx",
+  "buildpacks": [
+    { "url": "urn:buildpack:heroku/nodejs" }
+  ]
+}

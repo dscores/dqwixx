@@ -1,0 +1,10 @@
+[
+  "www/vendor/bootstrap/dist/css/bootstrap.min.css",
+  "www/vendor/bootstrap/dist/fonts/*",
+  "www/vendor/bootstrap/dist/js/bootstrap.min.js",
+  "www/vendor/jquery/dist/jquery.min.js",
+  "www/vendor/riot/riot.min.js",
+  "www/index.html",
+  "www/scorecard.css",
+  "www/scorecard.js"
+]
