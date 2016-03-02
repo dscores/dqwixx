@@ -1,15 +1,23 @@
-.portrait {
-  display: none;
-}
-.landscape {
-  display: block;
+.row {
+  height: calc(100vh / 6);
 }
 
 @media all and (orientation:portrait) {
-  .portrait {
-    display: block;
+  .container-fluid {
+    -webkit-transform: rotate(90deg);
+    -webkit-transform-origin: top left;
+    -ms-transform: rotate(90deg);
+    -ms-transform-origin: top left;
+    transform: rotate(90deg);
+    transform-origin: top left;
+    position: absolute;
+    top: 0;
+    left: 100vw;
+    width: 100vh;
+    height: 100vw;
   }
-  .landscape {
-    display: none;
+
+  .row {
+    height: calc(100vw / 6);
   }
 }
