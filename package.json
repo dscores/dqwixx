@@ -16,8 +16,8 @@
     "watch:riot": "riot -w tags/scorecard.tag www/scorecard.js"
   },
   "dependencies": {
-    "dwebserver": "^2.0.0",
     "bower": "^1.7.2",
+    "dwebserver": "^2.0.0",
     "node-sass": "^3.4.2",
     "npm-run-all": "^1.5.1",
     "riot": "^2.3.15"
