@@ -13,6 +13,11 @@
     position: absolute;
     top: 0;
     left: 100vw;
+  }
+}
+
+@media all and (orientation:portrait) {
+  .container-fluid {
     width: 100vh;
     height: 100vw;
   }
