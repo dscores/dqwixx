@@ -1,5 +1,9 @@
+html, body, .container-fluid {
+  height: 100%;
+}
+
 .row {
-  height: calc(100vh / 6);
+  height: calc(100% / 6);
 }
 
 @media all and (orientation:portrait) {
@@ -12,7 +16,7 @@
     transform-origin: top left;
     position: absolute;
     top: 0;
-    left: 100vw;
+    left: 100%;
   }
 }
 
