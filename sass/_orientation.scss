@@ -29,4 +29,20 @@ html, body, .container-fluid {
   .row {
     height: calc(100vw / 6);
   }
+
+  @media (device-width: 320px) and (device-height: 480px) {
+    .container-fluid {
+      width: 480px;
+    }
+  }
+  @media (device-width: 320px) and (device-height: 568px) {
+    .container-fluid {
+      width: 568px;
+    }
+  }
+  @media (device-width: 768px) and (device-height: 1024px) {
+    .container-fluid {
+      width: 1024px;
+    }
+  }
 }
