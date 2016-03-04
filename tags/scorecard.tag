@@ -1,9 +1,6 @@
 <scorecard>
   <script src="dqwixx.js"></script>
-  <div class="container portrait">
-    <div class="alert alert-info portrait-info" role="alert">Nutze den Landscape Modus für die optimale Ansicht</div>
-  </div>
-  <div class="container-fluid landscape { finished: state.finished }">
+  <div class="container-fluid { finished: state.finished }">
     <div each={ state.colors } class="row { color }">
       <button each={ numbers } ontouchstart={ clickNumber } onclick={ clickNumber } class="btn { skipped: skipped, marked: marked, disabled: last && !lockable }">
         <span class={ hidden: marked }>{ number }</span>
