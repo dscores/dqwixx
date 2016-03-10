@@ -1,9 +1,13 @@
-[
-  "www/vendor/bootstrap/dist/css/bootstrap.min.css",
-  "www/vendor/bootstrap/dist/fonts/*",
-  "www/vendor/bootstrap/dist/js/bootstrap.min.js",
-  "www/vendor/jquery/dist/jquery.min.js",
-  "www/vendor/riot/riot.min.js",
-  "www/scorecard.css",
-  "www/scorecard.js"
-]
+{
+  "copyfiles": [
+    "www/vendor/bootstrap/dist/css/bootstrap.min.css",
+    "www/vendor/bootstrap/dist/fonts/*",
+    "www/vendor/bootstrap/dist/js/bootstrap.min.js",
+    "www/vendor/jquery/dist/jquery.min.js",
+    "www/vendor/riot/riot.min.js",
+    "www/scorecard.css",
+    "www/scorecard.js"
+  ],
+  "icon": "res/icon.png",
+  "index": "www/index.html"
+}
