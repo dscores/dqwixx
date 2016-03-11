@@ -1,0 +1,12 @@
+[
+  {
+    "source": "node_modules/logo/logo.png",
+    "destinations": [
+      { "path": "www/img/apple-touch-icon/ipad-76x76.png", "width": 76 },
+      { "path": "www/img/apple-touch-icon/ipad-retina-152x152.png", "width": 152 },
+      { "path": "www/img/apple-touch-icon/iphone-60x60.png", "width": 60 },
+      { "path": "www/img/apple-touch-icon/iphone-retina-120x120.png", "width": 120 },
+      { "path": "www/favicon.ico", "width": 32 }
+    ]
+  }
+]

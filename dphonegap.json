@@ -8,6 +8,6 @@
     "www/scorecard.css",
     "www/scorecard.js"
   ],
-  "icon": "res/icon.png",
-  "index": "www/index.html"
+  "index": "www/index.html",
+  "logo": "node_modules/logo/logo.png"
 }
