@@ -19,8 +19,8 @@
   "dependencies": {
     "bower": "^1.7.2",
     "dlogos": "^1.0.0",
+    "dragonprojects-logo": "^1.0.0",
     "dwebserver": "^2.0.0",
-    "logo": "dragonprojects/logo",
     "node-sass": "^3.4.2",
     "npm-run-all": "^1.5.1",
     "riot": "^2.3.15"
