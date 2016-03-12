@@ -9,5 +9,5 @@
     "www/scorecard.js"
   ],
   "index": "www/index.html",
-  "logo": "node_modules/logo/logo.png"
+  "logo": "node_modules/dragonprojects-logo/logo.png"
 }
