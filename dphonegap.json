@@ -8,6 +8,5 @@
     "www/scorecard.css",
     "www/scorecard.js"
   ],
-  "index": "www/index.html",
-  "logo": "node_modules/dragonprojects-logo/logo.png"
+  "index": "www/index.html"
 }
