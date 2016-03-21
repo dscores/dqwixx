@@ -5,8 +5,8 @@
     "www/vendor/bootstrap/dist/js/bootstrap.min.js",
     "www/vendor/jquery/dist/jquery.min.js",
     "www/vendor/riot/riot.min.js",
-    "www/scorecard.css",
-    "www/scorecard.js"
+    "www/app.css",
+    "www/app.js"
   ],
   "index": "www/index.html"
 }

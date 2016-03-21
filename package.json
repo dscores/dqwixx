@@ -9,12 +9,12 @@
     "postinstall": "npm-run-all --parallel postinstall:*",
     "postinstall:bower": "bower i",
     "postinstall:dlogos": "dlogos",
-    "postinstall:node-sass": "node-sass sass/scorecard.scss www/scorecard.css",
-    "postinstall:riot": "riot tags/scorecard.tag www/scorecard.js",
+    "postinstall:node-sass": "node-sass sass/app.scss www/app.css",
+    "postinstall:riot": "riot tags/app.tag www/app.js",
     "start": "dwebserver",
     "watch": "npm-run-all --parallel watch:*",
-    "watch:node-sass": "node-sass -w sass/scorecard.scss www/scorecard.css",
-    "watch:riot": "riot -w tags/scorecard.tag www/scorecard.js"
+    "watch:node-sass": "node-sass -w sass/app.scss www/app.css",
+    "watch:riot": "riot -w tags/app.tag www/app.js"
   },
   "dependencies": {
     "bower": "^1.7.2",

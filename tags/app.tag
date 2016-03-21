@@ -1,4 +1,4 @@
-<scorecard>
+<app>
   <script src="dqwixx.js"></script>
   <div class="container-fluid { finished: state.finished }">
     <div each={ state.colors } class="row { color }">
@@ -33,4 +33,4 @@
   this.clickNumber = function (e) { dqwixx.clickNumber(e.item); };
   this.clickLock = function (e) { dqwixx.clickLock(e.item); };
   this.clickFail = function (e) { dqwixx.clickFail(e.item); };
-</scorecard>
+</app>
