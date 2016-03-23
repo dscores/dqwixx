@@ -1,7 +1,7 @@
 [
   {
     "source": "node_modules/dragonprojects-logo/logo.png",
-    "path": "www/",
+    "path": "www",
     "destinations": [
       { "path": "img/apple-touch-icon/ipad-76x76.png", "width": 76 },
       { "path": "img/apple-touch-icon/ipad-retina-152x152.png", "width": 152 },
