@@ -2,7 +2,7 @@
   <script src="dqwixx.js"></script>
   <div class="container-fluid { finished: state.finished }">
     <div each={ state.colors } class="row { color }">
-      <button each={ numbers } ontouchstart={ clickNumber } onclick={ clickNumber } class="btn { skipped: skipped, marked: marked, disabled: last && !lockable }">
+      <button each={ numbers } ontouchstart={ clickNumber(color) } onclick={ clickNumber(color) } class="btn { skipped: skipped, marked: marked, disabled: last && !lockable }">
         <span class={ hidden: marked }>{ number }</span>
         <span class="glyphicon glyphicon-remove { hidden: !marked }"></span>
       </button>
@@ -27,10 +27,13 @@
 
   this.state = dqwixx.state;
 
-  dqwixx.clickRefresh();
+  var colors = {};
+  dqwixx.state.colors.map(function (color) {
+    colors[color.color] = color;
+  });
 
   this.clickRefresh = function () { dqwixx.clickRefresh(); };
-  this.clickNumber = function (e) { dqwixx.clickNumber(e.item); };
+  this.clickNumber = function (color) { return function (e) { dqwixx.clickNumber(colors[color], e.item); }; };
   this.clickLock = function (e) { dqwixx.clickLock(e.item); };
   this.clickFail = function (e) { dqwixx.clickFail(e.item); };
 </app>

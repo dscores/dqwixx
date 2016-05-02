@@ -6,12 +6,12 @@
     if (order === 'asc') {
       var number;
       for (number = 2; number <= 12; ++number) {
-        color.numbers.push({ color: color, number: number, marked: false, skipped: false, last: number === 12 });
+        color.numbers.push({ number: number, marked: false, skipped: false, last: number === 12 });
       }
     }
     if (order === 'desc') {
       for (number = 12; number >= 2; --number) {
-        color.numbers.push({ color: color, number: number, marked: false, skipped: false, last: number === 2 });
+        color.numbers.push({ number: number, marked: false, skipped: false, last: number === 2 });
       }
     }
     return color;
@@ -62,10 +62,9 @@
     state.finished = locked >= 2 || failed >= 4;
   }
 
-  function markNumber(number) {
+  function markNumber(color, number) {
     number.marked = true;
     number.skipped = false;
-    var color = number.color;
     if (number.last && !color.locked) {
       lockColor(color);
     } else {
@@ -79,9 +78,8 @@
     }
   }
 
-  function unmarkNumber(number) {
+  function unmarkNumber(color, number) {
     number.marked = false;
-    var color = number.color;
     if (number.last && color.locked) {
       unlockColor(color);
     } else {
@@ -89,7 +87,7 @@
       var last = numbers[10];
       var marked = numbers.filter(function (number) { return number.marked }).length;
       if (last.marked && marked <= 5) {
-        unmarkNumber(last);
+        unmarkNumber(color, last);
       }
       for (var i = numbers.length - 1; i >= 0; --i) {
         if (numbers[i].marked) {
@@ -118,7 +116,7 @@
     var numbers = color.numbers;
     var last = numbers[numbers.length - 1];
     if (last.marked) {
-      unmarkNumber(last);
+      unmarkNumber(color, last);
     } else {
       for (var i = numbers.length - 1; i >= 0; --i) {
         if (numbers[i].marked) {
@@ -129,17 +127,36 @@
     }
   }
 
-  var dqwixx = { state: {} };
+  function storeState(state) {
+    if (state) {
+      localStorage.setItem('dqwixx-state', JSON.stringify(state));
+    } else {
+      localStorage.removeItem('dqwixx-state');
+    }
+  }
 
-  dqwixx.clickNumber = function (number) {
-    var color = number.color;
+  function loadState() {
+    var state = localStorage.getItem('dqwixx-state');
+    if (state) {
+      state = JSON.parse(state);
+    }
+    return state;
+  }
+
+  var dqwixx = { state: loadState() };
+  if (!dqwixx.state) {
+    dqwixx.state = {};
+    refresh(dqwixx.state);
+  }
+
+  dqwixx.clickNumber = function (color, number) {
     if (number.last && !color.lockable) {
       return;
     }
     if (number.marked) {
-      unmarkNumber(number);
+      unmarkNumber(color, number);
     } else {
-      markNumber(number);
+      markNumber(color, number);
     }
     calcColorPoints(color);
     determineLockable(color);
@@ -147,6 +164,7 @@
     if (number.last) {
       determineFinished(dqwixx.state);
     }
+    storeState(dqwixx.state);
   };
 
   dqwixx.clickLock = function (color) {
@@ -159,6 +177,7 @@
     determineLockable(color);
     calcTotalPoints(dqwixx.state);
     determineFinished(dqwixx.state);
+    storeState(dqwixx.state);
   };
 
   dqwixx.clickFail = function (fail) {
@@ -166,10 +185,12 @@
     calcFailPoints(dqwixx.state);
     calcTotalPoints(dqwixx.state);
     determineFinished(dqwixx.state);
+    storeState(dqwixx.state);
   };
 
   dqwixx.clickRefresh = function () {
     refresh(dqwixx.state);
+    storeState();
   };
 
   window.dqwixx = dqwixx;
