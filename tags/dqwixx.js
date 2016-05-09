@@ -17,12 +17,30 @@
     return color;
   }
 
-  function refresh(state) {
+  function generate(state) {
     state.colors = [generateColor('red', 'asc'), generateColor('yellow', 'asc'), generateColor('green', 'desc'), generateColor('blue', 'desc')];
     state.fails = {
-        fails: [{ failed: false }, { failed: false }, { failed: false }, { failed: false }],
-        points: 0
+      fails: [{ failed: false }, { failed: false }, { failed: false }, { failed: false }],
+      points: 0
     };
+    state.points = 0;
+    state.finished = false;
+  }
+
+  function refresh(state) {
+    state.colors.forEach(function (color) {
+      color.numbers.forEach(function (number) {
+        number.marked = false;
+        number.skipped = false;
+      });
+      color.lockable = false;
+      color.closed = false;
+      color.points = 0;
+    });
+    state.fails.fails.forEach(function (fail) {
+      fail.failed = false;
+    });
+    state.fails.points = 0;
     state.points = 0;
     state.finished = false;
   }
@@ -146,7 +164,7 @@
   var dqwixx = { state: loadState() };
   if (!dqwixx.state) {
     dqwixx.state = {};
-    refresh(dqwixx.state);
+    generate(dqwixx.state);
   }
 
   dqwixx.clickNumber = function (color, number) {
