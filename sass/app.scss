@@ -10,13 +10,11 @@
 .btn {
   flex: 1;
   -webkit-flex: 1;
-  font-size: 5vmin;
+  font-size: 3.5vmin;
   font-weight: bold;
   border-radius: 3vmin;
 }
 
-.results .btn {
-  &.red, &.yellow, &.green, &.blue, &.fails, &.total {
-    pointer-events: none;
-  }
+.disabled, .marked, .skipped, .locked, .failed, .points {
+  pointer-events: none;
 }
