@@ -2,16 +2,17 @@
 
 (function () {
   function generateColor(color, order) {
-    color = { color: color, order: order, numbers: [], lockable: false, closed: false, points: 0 };
+    var _color = color;
+    color = { color: color, order: order, numbers: [], lockable: false, locked: false, points: 0 };
     if (order === 'asc') {
       var number;
       for (number = 2; number <= 12; ++number) {
-        color.numbers.push({ number: number, marked: false, skipped: false, last: number === 12 });
+        color.numbers.push({ color: _color, number: number, marked: false, skipped: false, last: number === 12 });
       }
     }
     if (order === 'desc') {
       for (number = 12; number >= 2; --number) {
-        color.numbers.push({ number: number, marked: false, skipped: false, last: number === 2 });
+        color.numbers.push({ color: _color, number: number, marked: false, skipped: false, last: number === 2 });
       }
     }
     return color;
@@ -34,7 +35,7 @@
         number.skipped = false;
       });
       color.lockable = false;
-      color.closed = false;
+      color.locked = false;
       color.points = 0;
     });
     state.fails.fails.forEach(function (fail) {
