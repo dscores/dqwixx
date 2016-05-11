@@ -31,11 +31,11 @@
 
   this.board = new Dqwixx.Board();
 
-  var storedString = localStorage.getItem('dqwixx-current');
-  if (storedString) {
-    var storedJson = JSON.parse(storedString);
-    this.board.resume(storedJson.board);
-    this.theme = storedJson.theme;
+  var currentString = localStorage.getItem('dqwixx-current');
+  if (currentString) {
+    var currentJson = JSON.parse(currentString);
+    this.board.resume(currentJson.board);
+    this.theme = currentJson.theme;
   } else {
     Dqwixx.classic(this.board);
     this.theme = 'classic';
@@ -43,7 +43,7 @@
 
   this.clickNumber = function (rowIndex, numberIndex) {
     return function () {
-      sessionStorage.setItem('dqwixx-before', JSON.stringify({ board: this.board, theme: this.theme }));
+      sessionStorage.setItem('dqwixx-before', localStorage.getItem('dqwixx-current'));
       this.board.markNumber(rowIndex, numberIndex);
       localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
     };
@@ -51,7 +51,7 @@
 
   this.clickLock = function (rowIndex) {
     return function () {
-      sessionStorage.setItem('dqwixx-before', JSON.stringify({ board: this.board, theme: this.theme }));
+      sessionStorage.setItem('dqwixx-before', localStorage.getItem('dqwixx-current'));
       this.board.closeRow(rowIndex);
       localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
     };
@@ -59,7 +59,7 @@
 
   this.clickFail = function (failIndex) {
     return function () {
-      sessionStorage.setItem('dqwixx-before', JSON.stringify({ board: this.board, theme: this.theme }));
+      sessionStorage.setItem('dqwixx-before', localStorage.getItem('dqwixx-current'));
       this.board.failFail(failIndex);
       localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
     };
@@ -70,9 +70,11 @@
   };
 
   this.clickRevert = function () {
-    var beforeJson = JSON.parse(sessionStorage.getItem('dqwixx-before'));
+    var beforeString = sessionStorage.getItem('dqwixx-before');
+    var beforeJson = JSON.parse(beforeString);
     this.board.resume(beforeJson.board);
     this.theme = beforeJson.theme;
+    localStorage.setItem('dqwixx-current', beforeString);
     sessionStorage.removeItem('dqwixx-before');
   };
 
@@ -81,7 +83,7 @@
       if (theme === this.theme) {
         return;
       }
-      sessionStorage.setItem('dqwixx-before', JSON.stringify({ board: this.board, theme: this.theme }));
+      sessionStorage.setItem('dqwixx-before', localStorage.getItem('dqwixx-current'));
       this.board = Dqwixx[theme](new Dqwixx.Board());
       this.theme = theme;
       localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
@@ -89,7 +91,7 @@
   };
 
   this.clickRefresh = function () {
-    sessionStorage.setItem('dqwixx-before', JSON.stringify({ board: this.board, theme: this.theme }));
+    sessionStorage.setItem('dqwixx-before', localStorage.getItem('dqwixx-current'));
     this.board = Dqwixx[this.theme](new Dqwixx.Board());
     localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
   };
