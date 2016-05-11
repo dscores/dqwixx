@@ -24,7 +24,8 @@
     <div class="row">
       <button class="btn btn-default revert { disabled: !isRevertable() }" ontouchstart={ clickRevert } onclick={ clickRevert }>Rückgängig</button>
       <button class="btn btn-default theme { active: theme === 'classic' }" ontouchstart={ clickTheme('classic') } onclick={ clickTheme('classic') }>Klassik</button>
-      <button class="btn btn-default theme { active: theme === 'mixed' }" ontouchstart={ clickTheme('mixed') } onclick={ clickTheme('mixed') }>Gemixxt</button>
+      <button class="btn btn-default theme { active: theme === 'mixedColors' }" ontouchstart={ clickTheme('mixedColors') } onclick={ clickTheme('mixedColors') }>Gemixxt<br/><span class="badge">Farben</span></button>
+      <button class="btn btn-default theme { active: theme === 'mixedNumbers' }" ontouchstart={ clickTheme('mixedNumbers') } onclick={ clickTheme('mixedNumbers') }>Gemixxt<br/><span class="badge">Zahlen</span></button>
       <button class="btn btn-default refresh" ontouchstart={ clickRefresh } onclick={ clickRefresh }>Nochmal</button>
     </div>
   </div>
@@ -84,7 +85,7 @@
         return;
       }
       sessionStorage.setItem('dqwixx-before', localStorage.getItem('dqwixx-current'));
-      this.board = Dqwixx[theme](new Dqwixx.Board());
+      this.board = Dqwixx.themes[theme](new Dqwixx.Board());
       this.theme = theme;
       localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
     };
@@ -92,7 +93,7 @@
 
   this.clickRefresh = function () {
     sessionStorage.setItem('dqwixx-before', localStorage.getItem('dqwixx-current'));
-    this.board = Dqwixx[this.theme](new Dqwixx.Board());
+    this.board = Dqwixx.themes[this.theme](new Dqwixx.Board());
     localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
   };
 </app>

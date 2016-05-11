@@ -282,14 +282,6 @@ exports["default"] = Row;
 
 },{"./Number":4}],6:[function(require,module,exports){
 "use strict";
-var CachedBoard_1 = require('../logics/CachedBoard');
-var classic_1 = require('../themes/classic');
-var mixed_1 = require('../themes/mixed');
-var Dqwixx = { Board: CachedBoard_1["default"], classic: classic_1["default"], mixed: mixed_1["default"] };
-window.Dqwixx = Dqwixx;
-
-},{"../logics/CachedBoard":2,"../themes/classic":7,"../themes/mixed":8}],7:[function(require,module,exports){
-"use strict";
 var Number_1 = require('../logics/Number');
 var Row_1 = require('../logics/Row');
 function Ascending(color) {
@@ -314,7 +306,7 @@ function classic(board) {
 exports.__esModule = true;
 exports["default"] = classic;
 
-},{"../logics/Number":4,"../logics/Row":5}],8:[function(require,module,exports){
+},{"../logics/Number":4,"../logics/Row":5}],7:[function(require,module,exports){
 "use strict";
 var Number_1 = require('../logics/Number');
 var Row_1 = require('../logics/Row');
@@ -378,12 +370,53 @@ function blue() {
     row.push(new Number_1["default"]('blue', 2));
     return row;
 }
-function mixed(board) {
+function mixedColors(board) {
     board.setRows([red(), yellow(), green(), blue()]);
     board.setFails(4);
     return board;
 }
 exports.__esModule = true;
-exports["default"] = mixed;
+exports["default"] = mixedColors;
 
-},{"../logics/Number":4,"../logics/Row":5}]},{},[6]);
+},{"../logics/Number":4,"../logics/Row":5}],8:[function(require,module,exports){
+"use strict";
+var Number_1 = require('../logics/Number');
+var Row_1 = require('../logics/Row');
+function row(color, numberLabels) {
+    var row = new Row_1["default"]();
+    for (var _i = 0, numberLabels_1 = numberLabels; _i < numberLabels_1.length; _i++) {
+        var numberLabel = numberLabels_1[_i];
+        row.push(new Number_1["default"](color, numberLabel));
+    }
+    return row;
+}
+function red() {
+    return row('red', [10, 6, 2, 8, 3, 4, 12, 5, 9, 7, 11]);
+}
+function yellow() {
+    return row('yellow', [9, 12, 4, 6, 7, 2, 5, 8, 11, 3, 10]);
+}
+function green() {
+    return row('green', [8, 2, 10, 12, 6, 9, 7, 4, 5, 11, 3]);
+}
+function blue() {
+    return row('blue', [5, 7, 11, 9, 12, 3, 8, 10, 2, 6, 4]);
+}
+function mixedNumbers(board) {
+    board.setRows([red(), yellow(), green(), blue()]);
+    board.setFails(4);
+    return board;
+}
+exports.__esModule = true;
+exports["default"] = mixedNumbers;
+
+},{"../logics/Number":4,"../logics/Row":5}],9:[function(require,module,exports){
+"use strict";
+var CachedBoard_1 = require('./logics/CachedBoard');
+var classic_1 = require('./themes/classic');
+var mixedColors_1 = require('./themes/mixedColors');
+var mixedNumbers_1 = require('./themes/mixedNumbers');
+var Dqwixx = { Board: CachedBoard_1["default"], themes: { classic: classic_1["default"], mixedColors: mixedColors_1["default"], mixedNumbers: mixedNumbers_1["default"] } };
+window.Dqwixx = Dqwixx;
+
+},{"./logics/CachedBoard":2,"./themes/classic":6,"./themes/mixedColors":7,"./themes/mixedNumbers":8}]},{},[9]);
