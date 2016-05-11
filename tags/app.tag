@@ -35,11 +35,11 @@
     localStorage.setItem('dqwixx-board-v2', JSON.stringify({ board: board, theme: theme }));
   }
 
-  var string = localStorage.getItem('dqwixx-board-v2');
-  if (string) {
-    var json = JSON.parse(string);
-    this.board.resume(json.board);
-    this.theme = json.theme;
+  var storedString = localStorage.getItem('dqwixx-board-v2');
+  if (storedString) {
+    var storedJson = JSON.parse(storedString);
+    this.board.resume(storedJson.board);
+    this.theme = storedJson.theme;
   } else {
     Dqwixx.classic(this.board);
     this.theme = 'classic';
