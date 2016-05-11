@@ -20,7 +20,8 @@
       <button each={ [{ color: 'red' }, { color: 'yellow' }, { color: 'green' }, { color: 'blue' }] } class="btn { color } points">{ board.getColorPoints(color) }</button>
       <button class="btn fail points">{ board.getFailPoints() }</button>
       <button class="btn total points">{ board.getPoints() }</button>
-      <button class="btn btn-info refresh" ontouchstart={ clickRefresh } onclick={ clickRefresh }><span class="glyphicon glyphicon-refresh"></span></button>
+      <button class="btn btn-info refresh" ontouchstart={ clickRefresh('classic') } onclick={ clickRefresh('classic') }><span class="glyphicon glyphicon-refresh"></span></button>
+      <button class="btn btn-info refresh" ontouchstart={ clickRefresh('mixed') } onclick={ clickRefresh('mixed') }><span class="glyphicon glyphicon-refresh"></span></button>
     </div>
   </div>
 
@@ -52,8 +53,8 @@
     store();
   };
 
-  this.clickRefresh = function () {
-    this.board = Dqwixx.classic(new Dqwixx.Board());
+  this.clickRefresh = (variant) => () => {
+    this.board = Dqwixx[variant](new Dqwixx.Board());
     store();
   };
 </app>
