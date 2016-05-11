@@ -15,6 +15,11 @@
   border-radius: 3vmin;
 }
 
+.badge {
+  font-size: 1.8vmin;
+  font-weight: bold;
+}
+
 .finished .btn:not(.revert):not(.theme):not(.refresh), .disabled, .marked, .skipped, .locked, .failed, .points, .active {
   pointer-events: none;
 }
