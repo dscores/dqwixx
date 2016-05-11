@@ -38,23 +38,31 @@
     Dqwixx.classic(this.board);
   }
 
-  this.clickNumber = (rowIndex, numberIndex) => () => {
-    this.board.markNumber(rowIndex, numberIndex);
-    store(this.board);
+  this.clickNumber = function (rowIndex, numberIndex) {
+    return function () {
+      this.board.markNumber(rowIndex, numberIndex);
+      store(this.board);
+    };
   };
 
-  this.clickLock = (rowIndex) => () => {
-    this.board.closeRow(rowIndex);
-    store(this.board);
+  this.clickLock = function (rowIndex) {
+    return function () {
+      this.board.closeRow(rowIndex);
+      store(this.board);
+    };
   };
 
-  this.clickFail = (failIndex) => () => {
-    this.board.failFail(failIndex);
-    store(this.board);
+  this.clickFail = function (failIndex) {
+    return function () {
+      this.board.failFail(failIndex);
+      store(this.board);
+    };
   };
 
-  this.clickRefresh = (variant) => () => {
-    this.board = Dqwixx[variant](new Dqwixx.Board());
-    store(this.board);
+  this.clickRefresh = function (variant) {
+    return function () {
+      this.board = Dqwixx[variant](new Dqwixx.Board());
+      store(this.board);
+    };
   };
 </app>
