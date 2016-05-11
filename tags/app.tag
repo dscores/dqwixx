@@ -1,39 +1,59 @@
 <app>
-  <script src="dqwixx.js"></script>
-  <div class="container-fluid { finished: state.finished }">
-    <div each={ state.colors } class="row">
-      <button each={ numbers } ontouchstart={ clickNumber(color) } onclick={ clickNumber(color) } class="btn { color } number { open: !marked && !skipped, skipped: skipped, marked: marked, disabled: last && !lockable }">
-        <span class={ hidden: marked }>{ number }</span>
-        <span class="glyphicon glyphicon-remove { hidden: !marked }"></span>
+  <div class="container-fluid { finished: board.isFinished() }">
+    <div each={ row, rowIndex in board.getRows() } class="row">
+      <button each={ number, numberIndex in row } ontouchstart={ clickNumber(rowIndex, numberIndex) } onclick={ clickNumber(rowIndex, numberIndex) } class="btn { number.getColor() } number { open: number.isNumberOpen(), marked: number.isNumberMarked(), skipped: number.isNumberSkipped(), disabled: row.isNumberDisabled(numberIndex) }">
+        <span class={ hidden: number.isNumberMarked() }>{ number.getLabel() }</span>
+        <span class="glyphicon glyphicon-remove { hidden: !number.isNumberMarked() }"></span>
       </button>
-      <button ontouchstart={ clickLock } onclick={ clickLock } class="btn { color } lock { open: !locked, locked: locked }">
-        <span class="glyphicon glyphicon-lock { hidden: locked }"></span>
-        <span class="glyphicon glyphicon-remove { hidden: !locked }"></span>
-      </button>
-    </div>
-    <div class="row">
-      <button each={ state.fails.fails } ontouchstart={ clickFail } onclick={ clickFail } class="btn fail { open: !failed, failed: failed }">
-        <span class="glyphicon glyphicon-ban-circle { hidden: failed }"></span>
-        <span class="glyphicon glyphicon-remove { hidden: !failed }"></span>
+      <button ontouchstart={ clickLock(rowIndex) } onclick={ clickLock(rowIndex) } class="btn { row.getLastNumber().getColor() } lock { open: row.isRowOpen(), locked: row.isRowClosed() }">
+        <span class="glyphicon glyphicon-lock { hidden: !row.isRowOpen() }"></span>
+        <span class="glyphicon glyphicon-remove { hidden: !row.isRowClosed() }"></span>
       </button>
     </div>
     <div class="row">
-      <button each={ state.colors } class="btn { color } points">+ { points }</button>
-      <button class="btn fail points">- { state.fails.points }</button>
-      <button class="btn total points">= { state.points }</button>
+      <button each={ fail, failIndex in board.getFails() } ontouchstart={ clickFail(failIndex) } onclick={ clickFail(failIndex) } class="btn fail { open: fail.isFailOpen(), failed: fail.isFailFailed() }">
+        <span class="glyphicon glyphicon-ban-circle { hidden: !fail.isFailOpen() }"></span>
+        <span class="glyphicon glyphicon-remove { hidden: !fail.isFailFailed() }"></span>
+      </button>
+    </div>
+    <div class="row">
+      <button each={ [{ color: 'red' }, { color: 'yellow' }, { color: 'green' }, { color: 'blue' }] } class="btn { color } points">{ board.getColorPoints(color) }</button>
+      <button class="btn fail points">{ board.getFailPoints() }</button>
+      <button class="btn total points">{ board.getPoints() }</button>
       <button class="btn btn-info refresh" ontouchstart={ clickRefresh } onclick={ clickRefresh }><span class="glyphicon glyphicon-refresh"></span></button>
     </div>
   </div>
 
-  this.state = dqwixx.state;
+  this.board = new Dqwixx.Board();
 
-  var colors = {};
-  dqwixx.state.colors.map(function (color) {
-    colors[color.color] = color;
-  });
+  const store = () => {
+    localStorage.setItem('dqwixx-board', JSON.stringify(this.board));
+  }
 
-  this.clickRefresh = function () { dqwixx.clickRefresh(); };
-  this.clickNumber = function (color) { return function (e) { dqwixx.clickNumber(colors[color], e.item); }; };
-  this.clickLock = function (e) { dqwixx.clickLock(e.item); };
-  this.clickFail = function (e) { dqwixx.clickFail(e.item); };
+  stringBoard = localStorage.getItem('dqwixx-board');
+  if (stringBoard) {
+    this.board.resume(JSON.parse(stringBoard));
+  } else {
+    Dqwixx.classic(this.board);
+  }
+
+  this.clickNumber = (rowIndex, numberIndex) => () => {
+    this.board.markNumber(rowIndex, numberIndex);
+    store();
+  };
+
+  this.clickLock = (rowIndex) => () => {
+    this.board.closeRow(rowIndex);
+    store();
+  };
+
+  this.clickFail = (failIndex) => () => {
+    this.board.failFail(failIndex);
+    store();
+  };
+
+  this.clickRefresh = function () {
+    this.board = Dqwixx.classic(new Dqwixx.Board());
+    store();
+  };
 </app>
