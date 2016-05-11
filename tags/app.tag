@@ -27,8 +27,8 @@
 
   this.board = new Dqwixx.Board();
 
-  const store = () => {
-    localStorage.setItem('dqwixx-board-v2', JSON.stringify(this.board));
+  function store(board) {
+    localStorage.setItem('dqwixx-board-v2', JSON.stringify(board));
   }
 
   stringBoard = localStorage.getItem('dqwixx-board-v2');
@@ -40,21 +40,21 @@
 
   this.clickNumber = (rowIndex, numberIndex) => () => {
     this.board.markNumber(rowIndex, numberIndex);
-    store();
+    store(this.board);
   };
 
   this.clickLock = (rowIndex) => () => {
     this.board.closeRow(rowIndex);
-    store();
+    store(this.board);
   };
 
   this.clickFail = (failIndex) => () => {
     this.board.failFail(failIndex);
-    store();
+    store(this.board);
   };
 
   this.clickRefresh = (variant) => () => {
     this.board = Dqwixx[variant](new Dqwixx.Board());
-    store();
+    store(this.board);
   };
 </app>
