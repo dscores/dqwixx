@@ -299,7 +299,6 @@ function Ascending(color) {
     }
     return row;
 }
-exports.Ascending = Ascending;
 function Descending(color) {
     var row = new Row_1["default"]();
     for (var numberLabel = 12; numberLabel >= 2; --numberLabel) {
@@ -307,7 +306,6 @@ function Descending(color) {
     }
     return row;
 }
-exports.Descending = Descending;
 function classic(board) {
     board.setRows([Ascending('red'), Ascending('yellow'), Descending('green'), Descending('blue')]);
     board.setFails(4);
@@ -318,8 +316,74 @@ exports["default"] = classic;
 
 },{"../logics/Number":4,"../logics/Row":5}],8:[function(require,module,exports){
 "use strict";
-function mixed(board) { return board; }
+var Number_1 = require('../logics/Number');
+var Row_1 = require('../logics/Row');
+function red() {
+    var row = new Row_1["default"]();
+    row.push(new Number_1["default"]('yellow', 2));
+    row.push(new Number_1["default"]('yellow', 3));
+    row.push(new Number_1["default"]('yellow', 4));
+    row.push(new Number_1["default"]('blue', 5));
+    row.push(new Number_1["default"]('blue', 6));
+    row.push(new Number_1["default"]('blue', 7));
+    row.push(new Number_1["default"]('green', 8));
+    row.push(new Number_1["default"]('green', 9));
+    row.push(new Number_1["default"]('green', 10));
+    row.push(new Number_1["default"]('red', 11));
+    row.push(new Number_1["default"]('red', 12));
+    return row;
+}
+function yellow() {
+    var row = new Row_1["default"]();
+    row.push(new Number_1["default"]('red', 2));
+    row.push(new Number_1["default"]('red', 3));
+    row.push(new Number_1["default"]('green', 4));
+    row.push(new Number_1["default"]('green', 5));
+    row.push(new Number_1["default"]('green', 6));
+    row.push(new Number_1["default"]('green', 7));
+    row.push(new Number_1["default"]('blue', 8));
+    row.push(new Number_1["default"]('blue', 9));
+    row.push(new Number_1["default"]('yellow', 10));
+    row.push(new Number_1["default"]('yellow', 11));
+    row.push(new Number_1["default"]('yellow', 12));
+    return row;
+}
+function green() {
+    var row = new Row_1["default"]();
+    row.push(new Number_1["default"]('blue', 12));
+    row.push(new Number_1["default"]('blue', 11));
+    row.push(new Number_1["default"]('blue', 10));
+    row.push(new Number_1["default"]('yellow', 9));
+    row.push(new Number_1["default"]('yellow', 8));
+    row.push(new Number_1["default"]('yellow', 7));
+    row.push(new Number_1["default"]('red', 6));
+    row.push(new Number_1["default"]('red', 5));
+    row.push(new Number_1["default"]('red', 4));
+    row.push(new Number_1["default"]('green', 3));
+    row.push(new Number_1["default"]('green', 2));
+    return row;
+}
+function blue() {
+    var row = new Row_1["default"]();
+    row.push(new Number_1["default"]('green', 12));
+    row.push(new Number_1["default"]('green', 11));
+    row.push(new Number_1["default"]('red', 10));
+    row.push(new Number_1["default"]('red', 9));
+    row.push(new Number_1["default"]('red', 8));
+    row.push(new Number_1["default"]('red', 7));
+    row.push(new Number_1["default"]('yellow', 6));
+    row.push(new Number_1["default"]('yellow', 5));
+    row.push(new Number_1["default"]('blue', 4));
+    row.push(new Number_1["default"]('blue', 3));
+    row.push(new Number_1["default"]('blue', 2));
+    return row;
+}
+function mixed(board) {
+    board.setRows([red(), yellow(), green(), blue()]);
+    board.setFails(4);
+    return board;
+}
 exports.__esModule = true;
 exports["default"] = mixed;
 
-},{}]},{},[6]);
+},{"../logics/Number":4,"../logics/Row":5}]},{},[6]);
