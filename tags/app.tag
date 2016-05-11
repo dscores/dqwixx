@@ -22,7 +22,7 @@
       <button class="btn total points">{ board.getPoints() }</button>
     </div>
     <div class="row">
-      <button class="btn btn-default revert" ontouchstart={ clickRevert } onclick={ clickRevert }>Rückgängig</button>
+      <button class="btn btn-default revert { disabled: !isRevertable() }" ontouchstart={ clickRevert } onclick={ clickRevert }>Rückgängig</button>
       <button class="btn btn-default theme { active: theme === 'classic' }" ontouchstart={ clickTheme('classic') } onclick={ clickTheme('classic') }>Klassik</button>
       <button class="btn btn-default theme { active: theme === 'mixed' }" ontouchstart={ clickTheme('mixed') } onclick={ clickTheme('mixed') }>Gemixxt</button>
       <button class="btn btn-default refresh" ontouchstart={ clickRefresh } onclick={ clickRefresh }>Nochmal</button>
@@ -31,11 +31,7 @@
 
   this.board = new Dqwixx.Board();
 
-  function store(board, theme) {
-    localStorage.setItem('dqwixx-board-v2', JSON.stringify({ board: board, theme: theme }));
-  }
-
-  var storedString = localStorage.getItem('dqwixx-board-v2');
+  var storedString = localStorage.getItem('dqwixx-current');
   if (storedString) {
     var storedJson = JSON.parse(storedString);
     this.board.resume(storedJson.board);
@@ -47,26 +43,37 @@
 
   this.clickNumber = function (rowIndex, numberIndex) {
     return function () {
+      sessionStorage.setItem('dqwixx-before', JSON.stringify({ board: this.board, theme: this.theme }));
       this.board.markNumber(rowIndex, numberIndex);
-      store(this.board, this.theme);
+      localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
     };
   };
 
   this.clickLock = function (rowIndex) {
     return function () {
+      sessionStorage.setItem('dqwixx-before', JSON.stringify({ board: this.board, theme: this.theme }));
       this.board.closeRow(rowIndex);
-      store(this.board, this.theme);
+      localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
     };
   };
 
   this.clickFail = function (failIndex) {
     return function () {
+      sessionStorage.setItem('dqwixx-before', JSON.stringify({ board: this.board, theme: this.theme }));
       this.board.failFail(failIndex);
-      store(this.board, this.theme);
+      localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
     };
   };
 
+  this.isRevertable = function () {
+    return sessionStorage.getItem('dqwixx-before');
+  };
+
   this.clickRevert = function () {
+    var beforeJson = JSON.parse(sessionStorage.getItem('dqwixx-before'));
+    this.board.resume(beforeJson.board);
+    this.theme = beforeJson.theme;
+    sessionStorage.removeItem('dqwixx-before');
   };
 
   this.clickTheme = function (theme) {
@@ -74,13 +81,16 @@
       if (theme === this.theme) {
         return;
       }
+      sessionStorage.setItem('dqwixx-before', JSON.stringify({ board: this.board, theme: this.theme }));
+      this.board = Dqwixx[theme](new Dqwixx.Board());
       this.theme = theme;
-      this.clickRefresh();
+      localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
     };
   };
 
   this.clickRefresh = function () {
+    sessionStorage.setItem('dqwixx-before', JSON.stringify({ board: this.board, theme: this.theme }));
     this.board = Dqwixx[this.theme](new Dqwixx.Board());
-    store(this.board, this.theme);
+    localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
   };
 </app>
