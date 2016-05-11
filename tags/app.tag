@@ -28,10 +28,10 @@
   this.board = new Dqwixx.Board();
 
   const store = () => {
-    localStorage.setItem('dqwixx-board', JSON.stringify(this.board));
+    localStorage.setItem('dqwixx-board-v2', JSON.stringify(this.board));
   }
 
-  stringBoard = localStorage.getItem('dqwixx-board');
+  stringBoard = localStorage.getItem('dqwixx-board-v2');
   if (stringBoard) {
     this.board.resume(JSON.parse(stringBoard));
   } else {
