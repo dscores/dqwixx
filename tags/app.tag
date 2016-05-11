@@ -38,7 +38,7 @@
     this.board.resume(currentJson.board);
     this.theme = currentJson.theme;
   } else {
-    Dqwixx.classic(this.board);
+    Dqwixx.themes.classic(this.board);
     this.theme = 'classic';
   }
 
