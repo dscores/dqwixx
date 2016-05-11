@@ -22,10 +22,10 @@
       <button class="btn total points">{ board.getPoints() }</button>
     </div>
     <div class="row">
-      <button class="btn btn-default revert" ontouchstart={ clickRevert } onclick={ clickRevert }><span class="glyphicon glyphicon-backward"></span></button>
+      <button class="btn btn-default revert" ontouchstart={ clickRevert } onclick={ clickRevert }>Rückgängig</button>
       <button class="btn btn-default theme { active: theme === 'classic' }" ontouchstart={ clickTheme('classic') } onclick={ clickTheme('classic') }>Klassik</button>
       <button class="btn btn-default theme { active: theme === 'mixed' }" ontouchstart={ clickTheme('mixed') } onclick={ clickTheme('mixed') }>Gemixxt</button>
-      <button class="btn btn-default refresh" ontouchstart={ clickRefresh } onclick={ clickRefresh }><span class="glyphicon glyphicon-refresh"></span></button>
+      <button class="btn btn-default refresh" ontouchstart={ clickRefresh } onclick={ clickRefresh }>Nochmal</button>
     </div>
   </div>
 
