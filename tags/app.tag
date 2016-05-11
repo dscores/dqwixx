@@ -20,49 +20,53 @@
       <button each={ [{ color: 'red' }, { color: 'yellow' }, { color: 'green' }, { color: 'blue' }] } class="btn { color } points">{ board.getColorPoints(color) }</button>
       <button class="btn fail points">{ board.getFailPoints() }</button>
       <button class="btn total points">{ board.getPoints() }</button>
-      <button class="btn btn-info refresh" ontouchstart={ clickRefresh('classic') } onclick={ clickRefresh('classic') }><span class="glyphicon glyphicon-refresh"></span></button>
-      <button class="btn btn-info refresh" ontouchstart={ clickRefresh('mixed') } onclick={ clickRefresh('mixed') }><span class="glyphicon glyphicon-refresh"></span></button>
+      <button class="btn btn-default refresh { active: theme === 'classic' }" ontouchstart={ clickRefresh('classic') } onclick={ clickRefresh('classic') }><span class="glyphicon glyphicon-refresh"></span> <span class="badge">Klassik</span></button>
+      <button class="btn btn-default refresh { active: theme === 'mixed' }" ontouchstart={ clickRefresh('mixed') } onclick={ clickRefresh('mixed') }><span class="glyphicon glyphicon-refresh"></span> <span class="badge">Gemixxt</span></button>
     </div>
   </div>
 
   this.board = new Dqwixx.Board();
 
-  function store(board) {
-    localStorage.setItem('dqwixx-board-v2', JSON.stringify(board));
+  function store(board, theme) {
+    localStorage.setItem('dqwixx-board-v2', JSON.stringify({ board: board, theme: theme }));
   }
 
-  stringBoard = localStorage.getItem('dqwixx-board-v2');
-  if (stringBoard) {
-    this.board.resume(JSON.parse(stringBoard));
+  var string = localStorage.getItem('dqwixx-board-v2');
+  if (string) {
+    var json = JSON.parse(string);
+    this.board.resume(json.board);
+    this.theme = json.theme;
   } else {
     Dqwixx.classic(this.board);
+    this.theme = 'classic';
   }
 
   this.clickNumber = function (rowIndex, numberIndex) {
     return function () {
       this.board.markNumber(rowIndex, numberIndex);
-      store(this.board);
+      store(this.board, this.theme);
     };
   };
 
   this.clickLock = function (rowIndex) {
     return function () {
       this.board.closeRow(rowIndex);
-      store(this.board);
+      store(this.board, this.theme);
     };
   };
 
   this.clickFail = function (failIndex) {
     return function () {
       this.board.failFail(failIndex);
-      store(this.board);
+      store(this.board, this.theme);
     };
   };
 
-  this.clickRefresh = function (variant) {
+  this.clickRefresh = function (theme) {
     return function () {
-      this.board = Dqwixx[variant](new Dqwixx.Board());
-      store(this.board);
+      this.board = Dqwixx[theme](new Dqwixx.Board());
+      this.theme = theme;
+      store(this.board, this.theme);
     };
   };
 </app>
