@@ -20,8 +20,8 @@
       <button each={ [{ color: 'red' }, { color: 'yellow' }, { color: 'green' }, { color: 'blue' }] } class="btn { color } points">{ board.getColorPoints(color) }</button>
       <button class="btn fail points">{ board.getFailPoints() }</button>
       <button class="btn total points">{ board.getPoints() }</button>
-      <button class="btn btn-default refresh { active: theme === 'classic' }" ontouchstart={ clickRefresh('classic') } onclick={ clickRefresh('classic') }><span class="glyphicon glyphicon-refresh"></span> <span class="badge">Klassik</span></button>
-      <button class="btn btn-default refresh { active: theme === 'mixed' }" ontouchstart={ clickRefresh('mixed') } onclick={ clickRefresh('mixed') }><span class="glyphicon glyphicon-refresh"></span> <span class="badge">Gemixxt</span></button>
+      <button class="btn btn-default refresh { active: theme === 'classic' }" ontouchstart={ clickRefresh('classic') } onclick={ clickRefresh('classic') }>Klassik</button>
+      <button class="btn btn-default refresh { active: theme === 'mixed' }" ontouchstart={ clickRefresh('mixed') } onclick={ clickRefresh('mixed') }>Gemixxt</button>
     </div>
   </div>
 
