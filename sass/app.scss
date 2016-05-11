@@ -15,6 +15,6 @@
   border-radius: 3vmin;
 }
 
-.finished .btn:not(.refresh), .disabled, .marked, .skipped, .locked, .failed, .points {
+.finished .btn:not(.revert):not(.theme):not(.refresh), .disabled, .marked, .skipped, .locked, .failed, .points, .active {
   pointer-events: none;
 }

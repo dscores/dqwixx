@@ -20,8 +20,12 @@
       <button each={ [{ color: 'red' }, { color: 'yellow' }, { color: 'green' }, { color: 'blue' }] } class="btn { color } points">{ board.getColorPoints(color) }</button>
       <button class="btn fail points">{ board.getFailPoints() }</button>
       <button class="btn total points">{ board.getPoints() }</button>
-      <button class="btn btn-default refresh { active: theme === 'classic' }" ontouchstart={ clickRefresh('classic') } onclick={ clickRefresh('classic') }>Klassik</button>
-      <button class="btn btn-default refresh { active: theme === 'mixed' }" ontouchstart={ clickRefresh('mixed') } onclick={ clickRefresh('mixed') }>Gemixxt</button>
+    </div>
+    <div class="row">
+      <button class="btn btn-default revert" ontouchstart={ clickRevert } onclick={ clickRevert }><span class="glyphicon glyphicon-backward"></span></button>
+      <button class="btn btn-default theme { active: theme === 'classic' }" ontouchstart={ clickTheme('classic') } onclick={ clickTheme('classic') }>Klassik</button>
+      <button class="btn btn-default theme { active: theme === 'mixed' }" ontouchstart={ clickTheme('mixed') } onclick={ clickTheme('mixed') }>Gemixxt</button>
+      <button class="btn btn-default refresh" ontouchstart={ clickRefresh } onclick={ clickRefresh }><span class="glyphicon glyphicon-refresh"></span></button>
     </div>
   </div>
 
@@ -62,11 +66,21 @@
     };
   };
 
-  this.clickRefresh = function (theme) {
+  this.clickRevert = function () {
+  };
+
+  this.clickTheme = function (theme) {
     return function () {
-      this.board = Dqwixx[theme](new Dqwixx.Board());
+      if (theme === this.theme) {
+        return;
+      }
       this.theme = theme;
-      store(this.board, this.theme);
+      this.clickRefresh();
     };
+  };
+
+  this.clickRefresh = function () {
+    this.board = Dqwixx[this.theme](new Dqwixx.Board());
+    store(this.board, this.theme);
   };
 </app>
