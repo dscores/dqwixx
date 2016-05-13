@@ -10,13 +10,20 @@
 .btn {
   flex: 1;
   -webkit-flex: 1;
-  font-size: 5vmin;
+  font-size: 5.5vmin;
   font-weight: bold;
   border-radius: 3vmin;
 }
 
-.results .btn {
-  &.red, &.yellow, &.green, &.blue, &.fails, &.total {
-    pointer-events: none;
-  }
+.revert, .theme, .refresh {
+  font-size: 3.5vmin;
+}
+
+.badge {
+  font-size: 2.0vmin;
+  font-weight: bold;
+}
+
+.finished .btn:not(.revert):not(.theme):not(.refresh), .disabled, .marked, .skipped, .locked, .failed, .points, .active {
+  pointer-events: none;
 }
