@@ -2,8 +2,12 @@ html, body, .container-fluid {
   height: 100%;
 }
 
-.row {
+:not(.bigPoints) .row {
   height: calc(100% / 7);
+}
+
+.bigPoints .row {
+  height: calc(100% / 9);
 }
 
 @media all and (orientation:portrait) {
@@ -26,7 +30,11 @@ html, body, .container-fluid {
     height: 100vw;
   }
 
-  .row {
+  :not(.bigPoints) .row {
     height: calc(100vw / 7);
+  }
+
+  .bigPoints .row {
+    height: calc(100vw / 9);
   }
 }

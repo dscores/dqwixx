@@ -10,20 +10,24 @@
 .btn {
   flex: 1;
   -webkit-flex: 1;
-  font-size: 5.5vmin;
+  font-size: 4vmin;
   font-weight: bold;
   border-radius: 3vmin;
 }
 
+.red-yellow, .green-blue {
+  border-radius: 50%;
+}
+
 .revert, .theme, .refresh {
-  font-size: 3.5vmin;
+  font-size: 2.5vmin;
 }
 
 .badge {
-  font-size: 2.0vmin;
+  font-size: 1.5vmin;
   font-weight: bold;
 }
 
-.finished .btn:not(.revert):not(.theme):not(.refresh), .disabled, .marked, .skipped, .locked, .failed, .points, .active {
+.finished .btn:not(.revert):not(.theme):not(.refresh), .disabled, .marked, .skipped, .locked, .failed, .points, .active, .empty {
   pointer-events: none;
 }

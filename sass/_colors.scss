@@ -49,3 +49,38 @@
 .total {
   @include colors(#000000);
 }
+
+@mixin bigPointColor($colorA, $colorB) {
+  background-image: -webkit-linear-gradient(top, $colorA, $colorA 50%, $colorB 50%);
+  background-image: linear-gradient(to bottom, $colorA, $colorA 50%, $colorB 50%);
+}
+
+@mixin bigPointColors($colorA, $colorB) {
+  &.open {
+    @include bigPointColor($colorA, $colorB);
+    color: white;
+
+    &:hover {
+      @include bigPointColor(darken($colorA, 10%), darken($colorB, 10%));
+      color: white;
+    }
+  }
+
+  &.marked {
+    @include bigPointColor(darken($colorA, 30%), darken($colorB, 30%));
+    color: white;
+  }
+
+  &.skipped {
+    @include bigPointColor(lighten($colorA, 20%), lighten($colorB, 20%));
+    color: white;
+  }
+}
+
+.red-yellow {
+  @include bigPointColors(#d9534f, #f0ad4e);
+}
+
+.green-blue {
+  @include bigPointColors(#5cb85c, #337ab7);
+}
