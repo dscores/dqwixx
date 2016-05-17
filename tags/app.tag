@@ -5,11 +5,11 @@
         <span class={ hidden: number.isNumberMarked() }>{ number.getLabel() }</span>
         <span class="glyphicon glyphicon-remove { hidden: !number.isNumberMarked() }"></span>
       </button>
-      <button if={ !row.isBigPoints() } ontouchstart={ clickLock(rowIndex) } onclick={ clickLock(rowIndex) } class="btn { row.getLastNumber().getColor() } lock { open: row.isRowOpen(), locked: row.isRowClosed() }">
+      <button hide={ row.isBigPoints() } ontouchstart={ clickLock(rowIndex) } onclick={ clickLock(rowIndex) } class="btn { row.getLastNumber().getColor() } lock { open: row.isRowOpen(), locked: row.isRowClosed() }">
         <span class="glyphicon glyphicon-lock { hidden: !row.isRowOpen() }"></span>
         <span class="glyphicon glyphicon-remove { hidden: !row.isRowClosed() }"></span>
       </button>
-      <div if={ row.isBigPoints() } class="btn empty"></div>
+      <div show={ row.isBigPoints() } class="btn empty"></div>
     </div>
     <div class="row">
       <button each={ fail, failIndex in board.getFails() } ontouchstart={ clickFail(failIndex) } onclick={ clickFail(failIndex) } class="btn fail { open: fail.isFailOpen(), failed: fail.isFailFailed() }">
