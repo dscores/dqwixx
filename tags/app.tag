@@ -24,11 +24,42 @@
     </div>
     <div class="row">
       <button class="btn btn-default revert { disabled: !isRevertable() }" ontouchstart={ clickRevert } onclick={ clickRevert }>Rückgängig</button>
+      <button class="btn btn-default rules" data-toggle="modal" data-target="#rulesModal">Spielregeln</button>
       <button class="btn btn-default theme { active: theme === 'classic' }" ontouchstart={ clickTheme('classic') } onclick={ clickTheme('classic') }>Klassik</button>
       <button class="btn btn-default theme { active: theme === 'mixedColors' }" ontouchstart={ clickTheme('mixedColors') } onclick={ clickTheme('mixedColors') }>Gemixxt<br/><span class="badge">Farben</span></button>
       <button class="btn btn-default theme { active: theme === 'mixedNumbers' }" ontouchstart={ clickTheme('mixedNumbers') } onclick={ clickTheme('mixedNumbers') }>Gemixxt<br/><span class="badge">Zahlen</span></button>
       <button class="btn btn-default theme { active: theme === 'bigPoints' }" ontouchstart={ clickTheme('bigPoints') } onclick={ clickTheme('bigPoints') }>Big Points</button>
       <button class="btn btn-default refresh" ontouchstart={ clickRefresh } onclick={ clickRefresh }>Nochmal</button>
+    </div>
+  </div>
+  <div class="modal fade" id="rulesModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">
+            Spielregeln
+            <span show={ theme === 'classic' }>(Klassik)</span>
+            <span show={ theme === 'mixedColors' }>(Gemixxt, Farben)</span>
+            <span show={ theme === 'mixedNumbers' }>(Gemixxt, Zahlen)</span>
+            <span show={ theme === 'bigPoints' }>(Big Points)</span>
+          </h4>
+        </div>
+        <div class="modal-body">
+          <div show={ theme === 'classic' }>
+            ...
+          </div>
+          <div show={ theme === 'mixedColors' }>
+            ...
+          </div>
+          <div show={ theme === 'mixedNumbers' }>
+            ...
+          </div>
+          <div show={ theme === 'bigPoints' }>
+            ...
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

@@ -19,7 +19,7 @@
   border-radius: 50%;
 }
 
-.revert, .theme, .refresh {
+.revert, .rules, .theme, .refresh {
   font-size: 2.5vmin;
 }
 
@@ -28,6 +28,6 @@
   font-weight: bold;
 }
 
-.finished .btn:not(.revert):not(.theme):not(.refresh), .disabled, .marked, .skipped, .locked, .failed, .points, .active, .empty {
+.finished .btn:not(.revert):not(.rules):not(.theme):not(.refresh), .disabled, .marked, .skipped, .locked, .failed, .points, .active, .empty {
   pointer-events: none;
 }
