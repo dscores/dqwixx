@@ -49,36 +49,36 @@
           <div show={ theme === 'classic' }>
 
             <h5>Zahlen ankreuzen</h5>
-            <p>Im Spielverlauf müssen die Zahlen in jeder der vier Farbreihen grundsätzlich von links nach rechts angekreuzt werden. Man muss nicht ganz links beginnen – es ist erlaubt, dass man Zahlen auslässt (auch mehrere auf einmal). Ausgelassene Zahlen dürfen nachträglich nicht mehr angekreuzt werden.</p>
+            <p>Im Spielverlauf müssen die Zahlen in jeder der vier Farbreihen grundsätzlich <b>von links nach rechts</b> angekreuzt werden. Man muss nicht ganz links beginnen – es ist erlaubt, dass man Zahlen auslässt (auch mehrere auf einmal). Ausgelassene Zahlen dürfen nachträglich nicht mehr angekreuzt werden.</p>
             <p class="bg-info">Hinweis: Wer möchte, kann ausgelassene Zahlen mit einem kleinen waagerechten Strich durchstreichen, damit sie nicht versehentlich nachträglich angekreuzt werden.</p>
             <p>
               <img src="img/rule-examples/classic/mark-numbers.png" class="img-responsive" alt="">
-              <i>Beispiel: In der roten Reihe wurde zuerst die 5 und später die 7 angekreuzt. Die rote 2, 3, 4 und 6 dürfen nachträglich nicht mehr angekreuzt werden. In der gelben Reihe kann nur noch die 11 und die 12 angekreuzt werden. In der grünen Reihe muss rechts von der 6 weitergemacht werden. In der blauen Reihe muss rechts von der 10 weitergemacht werden.</i>
+              <i>Beispiel: <b>In der roten Reihe</b> wurde zuerst die 5 und später die 7 angekreuzt. Die rote 2, 3, 4 und 6 dürfen nachträglich nicht mehr angekreuzt werden. <b>In der gelben Reihe</b> kann nur noch die 11 und die 12 angekreuzt werden. <b>In der grünen Reihe</b> muss rechts von der 6 weitergemacht werden. <b>In der blauen Reihe</b> muss rechts von der 10 weitergemacht werden.</i>
             </p>
 
             <h5>Spielablauf</h5>
-            <p>Jeder bekommt einen Zettel und einen Stift. Es wird ausgelost, welcher Spieler zuerst als aktiver Spieler fungiert. Der aktive Spieler würfelt mit allen sechs Würfeln. Nun werden die beiden folgenden Aktionen nacheinander ausgeführt, zuerst die 1. Aktion, danach die 2. Aktion.</p>
+            <p>Jeder bekommt einen Zettel und einen Stift. Es wird ausgelost, welcher Spieler zuerst als aktiver Spieler fungiert. Der aktive Spieler würfelt <b>mit allen sechs Würfeln</b>. Nun werden die beiden folgenden Aktionen <b>nacheinander</b> ausgeführt, zuerst die 1. Aktion, <b>danach</b> die 2. Aktion.</p>
             <ol>
               <li>
-                <p>Der aktive Spieler zählt die Augen der beiden weißen Würfel zusammen und sagt die Summe laut und deutlich an. Jeder Spieler darf nun (muss aber nicht!) die angesagte Zahl in einer beliebigen Farbreihe seiner Wahl ankreuzen.</p>
+                <p>Der aktive Spieler zählt die Augen <b>der beiden weißen</b> Würfel zusammen und sagt die Summe laut und deutlich an. <b>Jeder Spieler</b> darf nun (muss aber nicht!) die angesagte Zahl in einer <b>beliebigen</b> Farbreihe seiner Wahl ankreuzen.</p>
                 <p class="clearfix">
                   <img src="img/rule-examples/classic/dices-white.png" class="img-responsive pull-left" alt="">
                   <i>Beispiel: Max ist aktiver Spieler. Die beiden weißen Würfel zeigen eine 4 und eine 1. Max sagt laut und deutlich „fünf“ an. Emma kreuzt auf ihrem Zettel die gelbe 5 an. Max kreuzt die rote 5 an. Laura und Linus möchten nichts ankreuzen.</i>
                 </p>
               </li>
               <li>
-                <p>Der aktive Spieler (aber nicht die Anderen!) darf nun, muss aber nicht, genau einen weißen Würfel mit genau einem beliebigen Farbwürfel seiner Wahl kombinieren und die Summe in der entsprechenden Farbreihe ankreuzen.</p>
+                <p>Der aktive Spieler (aber nicht die Anderen!) darf nun, muss aber nicht, genau <b>einen weißen Würfel</b> mit genau <b>einem beliebigen Farbwürfel</b> seiner Wahl kombinieren und die Summe in der entsprechenden Farbreihe ankreuzen.</p>
                 <p class="clearfix">
                   <img src="img/rule-examples/classic/dices-color.png" class="img-responsive pull-left" alt="">
                   <i>Beispiel: Max kombiniert die weiße 4 mit der blauen 6 und kreuzt in der blauen Reihe die Zahl 10 an.</i>
                 </p>
               </li>
             </ol>
-            <p>Ganz wichtig: Falls der aktive Spieler weder in der 1. Aktion noch in der 2. Aktion eine Zahl ankreuzt, dann muss er in der Spalte "Fehlwürfe" ein Kreuz machen. Die nicht aktiven Spieler müssen keinen Fehlwurf markieren, egal ob sie etwas angekreuzt haben oder nicht.</p>
+            <p>Ganz wichtig: Falls der aktive Spieler <b>weder</b> in der 1. Aktion <b>noch</b> in der 2. Aktion eine Zahl ankreuzt, dann muss er in der Spalte <b>"Fehlwürfe"</b> ein Kreuz machen. Die nicht aktiven Spieler müssen keinen Fehlwurf markieren, egal ob sie etwas angekreuzt haben oder nicht.</p>
             <p>Nun wird der nächste Spieler im Uhrzeigersinn zum neuen aktiven Spieler. Er nimmt alle sechs Würfel und würfelt. Anschließend werden die beiden Aktionen nacheinander ausgeführt. In der beschriebenen Weise wird nachfolgend immer weiter gespielt.</p>
 
             <h5>Eine Reihe abschließen</h5>
-            <p>Möchte ein Spieler die Zahl ganz rechts in einer Farbreihe ankreuzen (rote 12, gelbe 12, grüne 2, blaue 2), dann muss er vorher mindestens fünf Kreuze in dieser Farbreihe gemacht haben. Kreuzt er schließlich die Zahl ganz rechts an, dann kreuzt er zusätzlich noch das Feld direkt daneben mit dem Schloss an – dieses Kreuz wird später bei der Endabrechnung mitgezählt! Diese Farbreihe ist nun für alle Spieler abgeschlossen und es kann in dieser Farbe in den folgenden Runden nichts mehr angekreuzt werden. Der zugehörige Farbwürfel wird sofort aus dem Spiel entfernt und nicht weiter benötigt.</p>
+            <p>Möchte ein Spieler <b>die Zahl ganz rechts</b> in einer Farbreihe ankreuzen (rote 12, gelbe 12, grüne 2, blaue 2), dann muss er vorher <b>mindestens fünf Kreuze</b> in dieser Farbreihe gemacht haben. Kreuzt er schließlich die Zahl ganz rechts an, dann kreuzt er <b>zusätzlich</b> noch das Feld direkt daneben mit dem Schloss an – dieses Kreuz wird später bei der Endabrechnung mitgezählt! Diese Farbreihe ist nun <b>für alle Spieler</b> abgeschlossen und es kann in dieser Farbe in den folgenden Runden nichts mehr angekreuzt werden. Der zugehörige Farbwürfel wird sofort aus dem Spiel entfernt und nicht weiter benötigt.</p>
             <p>
               <img src="img/rule-examples/classic/closed-green-row.png" class="img-responsive" alt="">
               <img src="img/rule-examples/classic/remove-green-dice.png" class="img-responsive" alt="">
@@ -87,7 +87,7 @@
             <p class="bg-warning">Beachte: Kreuzt ein Spieler die Zahl ganz rechts an, dann muss er dies laut und deutlich ansagen, damit alle Spieler wissen, dass diese Farbreihe nun abgeschlossen wird. Falls das Abschließen der Reihe während der 1. Aktion geschieht, können gegebenenfalls nämlich gleichzeitig auch andere Spieler diese Reihe noch abschließen und ebenfalls das Schloss ankreuzen. Hat ein Spieler bisher weniger als fünf Kreuze in der Farbreihe, dann darf er das Feld ganz rechts auf keinen Fall ankreuzen, auch wenn die Reihe von einem anderen Spieler abgeschlossen wird.</p>
 
             <h5>Spielende</h5>
-            <p>Das Spiel endet sofort, wenn jemand seinen vierten Fehlwurf angekreuzt hat. Außerdem endet das Spiel sofort, wenn (egal von welchen Spielern) zwei Reihen abgeschlossen und somit zwei Farbwürfel entfernt wurden.</p>
+            <p>Das Spiel endet <b>sofort</b>, wenn jemand seinen vierten Fehlwurf angekreuzt hat. Außerdem endet das Spiel <b>sofort</b>, wenn (egal von welchen Spielern) zwei Reihen abgeschlossen und somit zwei Farbwürfel entfernt wurden.</p>
             <p class="bg-info">Hinweis: Es kann (während der 1. Aktion) passieren, dass gleichzeitig mit der zweiten Reihe auch eine dritte Reihe abgeschlossen wird.</p>
             <p><i>Beispiel: Die grüne Reihe wurde bereits abgeschlossen. Nun würfelt Emma mit den weißen Würfeln zwei 6en und sagt „zwölf“ an. Max kreuzt die rote 12 an und schließt die rote Reihe ab. Gleichzeitig kreuzt Linus die gelbe 12 an und schließt die gelbe Reihe ab.</i></p>
 
