@@ -48,6 +48,8 @@
         <div class="modal-body">
           <div show={ theme === 'classic' }>
 
+            <p>Jeder Spieler versucht, auf seinem Zettel möglichst viele Zahlen in den vier Farbreihen anzukreuzen. Je mehr Kreuze in einer Farbreihe sind, desto mehr Punkte gibt es dafür. Wer zum Schluss insgesamt die meisten Punkte hat, gewinnt.</p>
+
             <h5>Zahlen ankreuzen</h5>
             <p>Im Spielverlauf müssen die Zahlen in jeder der vier Farbreihen grundsätzlich <b>von links nach rechts</b> angekreuzt werden. Man muss nicht ganz links beginnen – es ist erlaubt, dass man Zahlen auslässt (auch mehrere auf einmal). Ausgelassene Zahlen dürfen nachträglich nicht mehr angekreuzt werden.</p>
             <p class="bg-info">Hinweis: Wer möchte, kann ausgelassene Zahlen mit einem kleinen waagerechten Strich durchstreichen, damit sie nicht versehentlich nachträglich angekreuzt werden.</p>
