@@ -134,7 +134,30 @@
 
           </div>
           <div show={ theme === 'bigPoints' }>
-            ...
+
+            <p>Die Spielregeln für die normalen vier Farbreihen (quadratische Felder) und der Spielablauf bleiben <b>exakt</b> so wie beim Originalspiel, es ändert sich <b>nichts</b>. Die Spieler kommen reihum dran und führen ihre beiden Aktionen aus. <b>Am Ende</b> gibt es Punkte für die vier normalen Farbreihen und jeder Fehlwurf zählt 5 Minuspunkte, wie gehabt.</p>
+            <p>Für die beiden Bonusreihen selbst (runde Felder) gibt es keine Punkte. <b>Aber:</b> Angekreuzte Bonusfelder zählen für <b>beide</b> benachbarten Farbreihen mit. Auf diese Weise kann man sehr viele Kreuze pro Farbreihe werten und sehr viele Punkte pro Farbreihe machen (maximal 120).</p>
+
+            <h5>Wie werden die Bonusfelder angekreuzt?</h5>
+            <p>Hat man ein normales Farbfeld angekreuzt (z.B. die grüne 10), darf man fortan, wenn man diese Zahl erneut würfelt (also wieder eine grüne 10), das benachbarte zweifarbige Bonusfeld ankreuzen. Das gilt auch für den Fall, dass man eine entsprechende „weiße Zahl“ (weiße 10) nutzt. Es ist nicht möglich, ein Bonusfeld anzukreuzen, wenn man nicht <b>vorher</b> mindestens ein benachbartes Farbfeld angekreuzt hat.</p>
+            <p class="clearfix">
+              <img src="img/rule-examples/bigpoints/enable-numbers.png" class="img-responsive pull-left" alt="">
+              <i>Sarah hat die gelbe 3 und die rote 5 angekreuzt. Sollte sie selbst noch einmal eine gelbe 3 oder eine rote 5 würfeln, darf sie in dieser Aktion das benachbarte Bonusfeld ankreuzen. Das kann sie ebenfalls tun, wenn sie selbst (oder ein Mitspieler!) eine weiße 3 oder eine weiße 5 würfelt.</i>
+            </p>
+
+            <h5>Was muss man noch beachten?</h5>
+            <ul>
+              <li>Auch für die beiden Bonusreihen gilt grundsätzlich: Es <b>muss</b> von links nach rechts angekreuzt werden und ausgelassene Bonusfelder dürfen nachträglich <b>nicht</b> mehr angekreuzt werden.</li>
+              <li>Eine Farbreihe kann, wie gehabt, mit dem (mindestens) 6. Kreuz in dieser Farbreihe geschlossen werden, wenn man damit das Feld ganz rechts ankreuzt. Die angekreuzten Bonusfelder werden hierbei <b>nicht</b> berücksichtigt, also für das Schließen der Farbreihe  (mind. 6. Kreuz) nicht mitgezählt.</li>
+              <li>Sollte eine Farbreihe geschlossen werden (z.B. Grün), kann man weiterhin, wie beschrieben, die benachbarten Bonusfelder ankreuzen. Die auf diese Weise noch angekreuzten Bonusfelder zählen für <b>beide</b> benachbarten Farbreihen mit - gewertet wird erst ganz zum Schluß.</li>
+              <li>Sollte der aktive Spieler in seinen beiden Aktionen lediglich ein Bonusfeld ankreuzen, so gilt dies nicht als Fehlwurf.</li>
+            </ul>
+            <p>
+              <img src="img/rule-examples/bigpoints/score.png" class="img-responsive" alt="">
+              <i>Wertungsbeispiel: Sarah hat 3 rot-gelbe Bonusfelder angekreuzt. Diese 3 Kreuze zählen sowohl für die rote als auch für die gelbe Farbreihe. Außerdem hat Sarah 4 grün-blaue Bonusfelder angekreuzt. Diese 4 Kreuze zählen sowohl für die grüne als auch für die blaue Farbreihe mit.</i>
+            </p>
+            <p class="bg-warning">Beachte: Sollte jemand in einer Farbreihe (plus benachbarte Bonusfelder) mehr als 15 Kreuze haben, so ist dies zwar erlaubt, aber es werden maximal nur 15 Kreuze pro Farbreihe gewertet</p>
+
           </div>
         </div>
       </div>
