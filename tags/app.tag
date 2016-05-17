@@ -53,7 +53,7 @@
             <p class="bg-info">Hinweis: Wer möchte, kann ausgelassene Zahlen mit einem kleinen waagerechten Strich durchstreichen, damit sie nicht versehentlich nachträglich angekreuzt werden.</p>
             <p>
               <img src="img/rule-examples/classic/mark-numbers.png" class="img-responsive" alt="">
-              <p>Beispiel: In der roten Reihe wurde zuerst die 5 und später die 7 angekreuzt. Die rote 2, 3, 4 und 6 dürfen nachträglich nicht mehr angekreuzt werden. In der gelben Reihe kann nur noch die 11 und die 12 angekreuzt werden. In der grünen Reihe muss rechts von der 6 weitergemacht werden. In der blauen Reihe muss rechts von der 10 weitergemacht werden.
+              <i>Beispiel: In der roten Reihe wurde zuerst die 5 und später die 7 angekreuzt. Die rote 2, 3, 4 und 6 dürfen nachträglich nicht mehr angekreuzt werden. In der gelben Reihe kann nur noch die 11 und die 12 angekreuzt werden. In der grünen Reihe muss rechts von der 6 weitergemacht werden. In der blauen Reihe muss rechts von der 10 weitergemacht werden.</i>
             </p>
 
             <h5>Spielablauf</h5>
@@ -63,14 +63,14 @@
                 <p>Der aktive Spieler zählt die Augen der beiden weißen Würfel zusammen und sagt die Summe laut und deutlich an. Jeder Spieler darf nun (muss aber nicht!) die angesagte Zahl in einer beliebigen Farbreihe seiner Wahl ankreuzen.</p>
                 <p class="clearfix">
                   <img src="img/rule-examples/classic/dices-white.png" class="img-responsive pull-left" alt="">
-                  Beispiel: Max ist aktiver Spieler. Die beiden weißen Würfel zeigen eine 4 und eine 1. Max sagt laut und deutlich „fünf“ an. Emma kreuzt auf ihrem Zettel die gelbe 5 an. Max kreuzt die rote 5 an. Laura und Linus möchten nichts ankreuzen.
+                  <i>Beispiel: Max ist aktiver Spieler. Die beiden weißen Würfel zeigen eine 4 und eine 1. Max sagt laut und deutlich „fünf“ an. Emma kreuzt auf ihrem Zettel die gelbe 5 an. Max kreuzt die rote 5 an. Laura und Linus möchten nichts ankreuzen.</i>
                 </p>
               </li>
               <li>
                 <p>Der aktive Spieler (aber nicht die Anderen!) darf nun, muss aber nicht, genau einen weißen Würfel mit genau einem beliebigen Farbwürfel seiner Wahl kombinieren und die Summe in der entsprechenden Farbreihe ankreuzen.</p>
                 <p class="clearfix">
                   <img src="img/rule-examples/classic/dices-color.png" class="img-responsive pull-left" alt="">
-                  Beispiel: Max kombiniert die weiße 4 mit der blauen 6 und kreuzt in der blauen Reihe die Zahl 10 an.
+                  <i>Beispiel: Max kombiniert die weiße 4 mit der blauen 6 und kreuzt in der blauen Reihe die Zahl 10 an.</i>
                 </p>
               </li>
             </ol>
@@ -82,20 +82,20 @@
             <p>
               <img src="img/rule-examples/classic/closed-green-row.png" class="img-responsive" alt="">
               <img src="img/rule-examples/classic/remove-green-dice.png" class="img-responsive" alt="">
-              Beispiel: Laura kreuzt die grüne 2 und zusätzlich das Schloss an. Der grüne Würfel wird aus dem Spiel entfernt.
+              <i>Beispiel: Laura kreuzt die grüne 2 und zusätzlich das Schloss an. Der grüne Würfel wird aus dem Spiel entfernt.</i>
             </p>
             <p class="bg-warning">Beachte: Kreuzt ein Spieler die Zahl ganz rechts an, dann muss er dies laut und deutlich ansagen, damit alle Spieler wissen, dass diese Farbreihe nun abgeschlossen wird. Falls das Abschließen der Reihe während der 1. Aktion geschieht, können gegebenenfalls nämlich gleichzeitig auch andere Spieler diese Reihe noch abschließen und ebenfalls das Schloss ankreuzen. Hat ein Spieler bisher weniger als fünf Kreuze in der Farbreihe, dann darf er das Feld ganz rechts auf keinen Fall ankreuzen, auch wenn die Reihe von einem anderen Spieler abgeschlossen wird.</p>
 
             <h5>Spielende</h5>
             <p>Das Spiel endet sofort, wenn jemand seinen vierten Fehlwurf angekreuzt hat. Außerdem endet das Spiel sofort, wenn (egal von welchen Spielern) zwei Reihen abgeschlossen und somit zwei Farbwürfel entfernt wurden.</p>
             <p class="bg-info">Hinweis: Es kann (während der 1. Aktion) passieren, dass gleichzeitig mit der zweiten Reihe auch eine dritte Reihe abgeschlossen wird.</p>
-            <p>Beispiel: Die grüne Reihe wurde bereits abgeschlossen. Nun würfelt Emma mit den weißen Würfeln zwei 6en und sagt „zwölf“ an. Max kreuzt die rote 12 an und schließt die rote Reihe ab. Gleichzeitig kreuzt Linus die gelbe 12 an und schließt die gelbe Reihe ab.</p>
+            <p><i>Beispiel: Die grüne Reihe wurde bereits abgeschlossen. Nun würfelt Emma mit den weißen Würfeln zwei 6en und sagt „zwölf“ an. Max kreuzt die rote 12 an und schließt die rote Reihe ab. Gleichzeitig kreuzt Linus die gelbe 12 an und schließt die gelbe Reihe ab.</i></p>
 
             <h5>Wertung</h5>
             <p>Unterhalb der vier Farbreihen ist angegeben, wie viele Punkte es für wie viele Kreuze innerhalb einer Reihe gibt. Jeder Fehlwurf zählt fünf Minuspunkte. Nun trägt jeder Spieler die Punkte für seine vier Farbreihen und die Minuspunkte für die Fehlwürfe unten auf dem Zettel in die entsprechenden Felder ein. Der Spieler mit dem höchsten Gesamtergebnis ist Sieger.</p>
             <p>
               <img src="img/rule-examples/classic/score.png" class="img-responsive" alt="">
-              Beispiel: In Rot hat Laura 4 Kreuze, das gibt 10 Punkte, in Gelb drei Kreuze (= 6 Punkte), in Grün 7 Kreuze (= 28 Punkte) und in Blau 8 Kreuze (= 36 Punkte). Für ihre beiden Fehlwürfe bekommt Laura 10 Minuspunkte. Lauras Gesamtergebnis lautet somit 70 Punkte.
+              <i>Beispiel: In Rot hat Laura 4 Kreuze, das gibt 10 Punkte, in Gelb drei Kreuze (= 6 Punkte), in Grün 7 Kreuze (= 28 Punkte) und in Blau 8 Kreuze (= 36 Punkte). Für ihre beiden Fehlwürfe bekommt Laura 10 Minuspunkte. Lauras Gesamtergebnis lautet somit 70 Punkte.</i>
             </p>
 
           </div>
