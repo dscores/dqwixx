@@ -1,0 +1,3 @@
+classic: http://www.brettspiele-report.de/images/q/qwixx/Spielanleitung-Qwixx.pdf
+mixed: http://www.nsv.de/spielregeln/qwixx-gemixxt.pdf
+bigPoints: http://gesellschaftsspiele.spielen.de/uploads/files/2403/55fbc15f786b8.pdf

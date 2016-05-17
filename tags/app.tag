@@ -100,10 +100,36 @@
 
           </div>
           <div show={ theme === 'mixedColors' }>
-            ...
+
+            <p>Alle Regeln des Qwixx-Würfelspieles bleiben <b>exakt</b> erhalten. Bei der vorliegenden Varianten müssen Sie lediglich folgendes beachten:</p>
+
+            <p>Die Zahlen innerhalb einer Reihe sind auf- bzw. absteigend, genau wie beim Originalspiel, aber die Farben sind in kleine Segmente aufgeteilt.</p>
+            <p>Schließt ein Spieler eine Reihe ab, indem er die Zahl ganz rechts ankreuzt, wird der entsprechende Farbwürfel <b>sofort</b> aus dem Spiel genommen. Wird also z. B. die oberste Reihe von einem Spieler geschlossen, indem er (mit seinem mindestens 6. Kreuz in dieser Reihe) die rote 12 ankreuzt, dann kommt der rote Würfel <b>sofort</b> aus dem Spiel und die oberste Reihe ist fortan für <b>alle</b> Spieler dicht.</p>
+            <p class="bg-warning">Beachte: In den anderen drei Reihen dürfen weiterhin (mit Hilfe der beiden weißen Würfel) rote Felder angekreuzt werden.</p>
+
+            <h5>Noch ein Tipp...</h5>
+            <p class="clearfix">
+              <img src="img/rule-examples/mixed/qwixx-cards.png" class="img-responsive pull-left" alt="">
+              Man kann die „Qwixx gemixxt“-Blöcke auch für das <b>Qwixx-Kartenspiel</b> verwenden. Alle Regeln des Kartenspieles bleiben unverändert, mit den oben beschriebenen Ergänzungen.
+            </p>
+            <p>Außerdem gilt: Wenn der aktive Spieler mehrere Karten ausspielt (sie müssen die gleiche Farbe haben), dann darf er in verschiedenen Reihen Kreuze machen.</p>
+            <p><i>Beispiel: Tim spielt die rote 3, die rote 8 und die rote 11 aus. Die rote 3 kreuzt er in der zweiten Reihe an und die rote 8 in der vierten Reihe. Die rote 11 möchte er nicht ankreuzen.</i></p>
+            <p class="bg-warning">Beachte: Wenn der aktive Spieler mehrere Felder innerhalb einer Reihe ankreuzt, dann darf er hierbei auch mehr als ein Feld auslassen.</p>
+
           </div>
           <div show={ theme === 'mixedNumbers' }>
-            ...
+
+            <p>Alle Regeln des Qwixx-Würfelspieles bleiben <b>exakt</b> erhalten. Bei der vorliegenden Varianten müssen Sie lediglich folgendes beachten:</p>
+
+            <p>Die Zahlen innerhalb einer Reihe sind nicht mehr auf- bzw. absteigend, sondern wild durcheinander gewürfelt.</p>
+            <p>Will ein Spieler eine Reihe schließen, also die Zahl ganz rechts ankreuzen, dann muss es nun in Rot mit einer 11 geschehen, in Gelb mit einer 10, in Grün mit einer 3 und in Blau mit einer 4.</p>
+
+            <h5>Noch ein Tipp...</h5>
+            <p class="clearfix">
+              <img src="img/rule-examples/mixed/qwixx-cards.png" class="img-responsive pull-left" alt="">
+              Man kann die „Qwixx gemixxt“-Blöcke auch für das <b>Qwixx-Kartenspiel</b> verwenden. Alle Regeln des Kartenspieles bleiben unverändert, mit den oben beschriebenen Ergänzungen.
+            </p>
+
           </div>
           <div show={ theme === 'bigPoints' }>
             ...
