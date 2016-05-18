@@ -142,7 +142,7 @@
             <p>Hat man ein normales Farbfeld angekreuzt (z.B. die grüne 10), darf man fortan, wenn man diese Zahl erneut würfelt (also wieder eine grüne 10), das benachbarte zweifarbige Bonusfeld ankreuzen. Das gilt auch für den Fall, dass man eine entsprechende "weiße Zahl" (weiße 10) nutzt. Es ist nicht möglich, ein Bonusfeld anzukreuzen, wenn man nicht <b>vorher</b> mindestens ein benachbartes Farbfeld angekreuzt hat.</p>
             <p class="clearfix">
               <img src="img/rule-examples/bigpoints/enable-numbers.png" class="img-responsive pull-left" alt="">
-              <i>Sarah hat die gelbe 6 und die rote 4 angekreuzt. Sollte sie selbst noch einmal eine gelbe 6 oder eine rote 4 würfeln, darf sie in dieser Aktion das benachbarte Bonusfeld ankreuzen. Das kann sie ebenfalls tun, wenn sie selbst (oder ein Mitspieler!) eine weiße 6 oder eine weiße 4 würfelt.</i>
+              <i>Sarah hat die rote 4 und die gelbe 6 angekreuzt. Sollte sie selbst noch einmal eine rote 4 oder eine gelbe 6 würfeln, darf sie in dieser Aktion das benachbarte Bonusfeld ankreuzen. Das kann sie ebenfalls tun, wenn sie selbst (oder ein Mitspieler!) eine weiße 4 oder eine weiße 6 würfelt.</i>
             </p>
 
             <h3>Was muss man noch beachten?</h3>
