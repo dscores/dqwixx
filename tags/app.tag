@@ -130,6 +130,7 @@
               <img src="img/rule-examples/mixed/qwixx-cards.png" class="img-responsive pull-left" alt="">
               Man kann die "Qwixx gemixxt"-Blöcke auch für das <b>Qwixx-Kartenspiel</b> verwenden. Alle Regeln des Kartenspieles bleiben unverändert, mit den oben beschriebenen Ergänzungen.
             </p>
+            <p class="bg-warning">Beachte: Wenn der aktive Spieler mehrere Felder innerhalb einer Reihe ankreuzt, dann darf er hierbei auch mehr als ein Feld auslassen.</p>
 
           </div>
           <div show={ theme === 'bigPoints' }>
