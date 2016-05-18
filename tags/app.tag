@@ -48,24 +48,23 @@
         <div class="modal-body">
           <div show={ theme === 'classic' }>
 
-            <p>Jeder Spieler versucht, auf seinem Zettel möglichst viele Zahlen in den vier Farbreihen anzukreuzen. Je mehr Kreuze in einer Farbreihe sind, desto mehr Punkte gibt es dafür. Wer zum Schluss insgesamt die meisten Punkte hat, gewinnt.</p>
+            <p>Jeder Spieler versucht, auf seinem Spielblock möglichst viele Zahlen in den vier Farbreihen anzukreuzen. Je mehr Kreuze in einer Farbreihe sind, desto mehr Punkte gibt es dafür. Wer zum Schluss insgesamt die meisten Punkte hat, gewinnt.</p>
 
             <h5>Zahlen ankreuzen</h5>
-            <p>Im Spielverlauf müssen die Zahlen in jeder der vier Farbreihen grundsätzlich <b>von links nach rechts</b> angekreuzt werden. Man muss nicht ganz links beginnen – es ist erlaubt, dass man Zahlen auslässt (auch mehrere auf einmal). Ausgelassene Zahlen dürfen nachträglich nicht mehr angekreuzt werden.</p>
-            <p class="bg-info">Hinweis: Wer möchte, kann ausgelassene Zahlen mit einem kleinen waagerechten Strich durchstreichen, damit sie nicht versehentlich nachträglich angekreuzt werden.</p>
+            <p>Im Spielverlauf müssen die Zahlen in jeder der vier Farbreihen grundsätzlich <b>von links nach rechts</b> angekreuzt werden. Man muss nicht ganz links beginnen – es ist erlaubt, dass man Zahlen auslässt (auch mehrere auf einmal). Ausgelassene Zahlen können nachträglich nicht mehr angekreuzt werden.</p>
             <p>
               <img src="img/rule-examples/classic/mark-numbers.png" class="img-responsive" alt="">
               <i>Beispiel: <b>In der roten Reihe</b> wurde zuerst die 5 und später die 7 angekreuzt. Die rote 2, 3, 4 und 6 dürfen nachträglich nicht mehr angekreuzt werden. <b>In der gelben Reihe</b> kann nur noch die 11 und die 12 angekreuzt werden. <b>In der grünen Reihe</b> muss rechts von der 6 weitergemacht werden. <b>In der blauen Reihe</b> muss rechts von der 10 weitergemacht werden.</i>
             </p>
 
             <h5>Spielablauf</h5>
-            <p>Jeder bekommt einen Zettel und einen Stift. Es wird ausgelost, welcher Spieler zuerst als aktiver Spieler fungiert. Der aktive Spieler würfelt <b>mit allen sechs Würfeln</b>. Nun werden die beiden folgenden Aktionen <b>nacheinander</b> ausgeführt, zuerst die 1. Aktion, <b>danach</b> die 2. Aktion.</p>
+            <p>Es wird ausgelost, welcher Spieler zuerst als aktiver Spieler fungiert. Der aktive Spieler würfelt <b>mit allen sechs Würfeln</b>. Nun werden die beiden folgenden Aktionen <b>nacheinander</b> ausgeführt, zuerst die 1. Aktion, <b>danach</b> die 2. Aktion.</p>
             <ol>
               <li>
                 <p>Der aktive Spieler zählt die Augen <b>der beiden weißen</b> Würfel zusammen und sagt die Summe laut und deutlich an. <b>Jeder Spieler</b> darf nun (muss aber nicht!) die angesagte Zahl in einer <b>beliebigen</b> Farbreihe seiner Wahl ankreuzen.</p>
                 <p class="clearfix">
                   <img src="img/rule-examples/classic/dices-white.png" class="img-responsive pull-left" alt="">
-                  <i>Beispiel: Max ist aktiver Spieler. Die beiden weißen Würfel zeigen eine 4 und eine 1. Max sagt laut und deutlich „fünf“ an. Emma kreuzt auf ihrem Zettel die gelbe 5 an. Max kreuzt die rote 5 an. Laura und Linus möchten nichts ankreuzen.</i>
+                  <i>Beispiel: Max ist aktiver Spieler. Die beiden weißen Würfel zeigen eine 4 und eine 1. Max sagt laut und deutlich "fünf" an. Emma kreuzt auf ihrem Zettel die gelbe 5 an. Max kreuzt die rote 5 an. Laura und Linus möchten nichts ankreuzen.</i>
                 </p>
               </li>
               <li>
@@ -80,21 +79,21 @@
             <p>Nun wird der nächste Spieler im Uhrzeigersinn zum neuen aktiven Spieler. Er nimmt alle sechs Würfel und würfelt. Anschließend werden die beiden Aktionen nacheinander ausgeführt. In der beschriebenen Weise wird nachfolgend immer weiter gespielt.</p>
 
             <h5>Eine Reihe abschließen</h5>
-            <p>Möchte ein Spieler <b>die Zahl ganz rechts</b> in einer Farbreihe ankreuzen (rote 12, gelbe 12, grüne 2, blaue 2), dann muss er vorher <b>mindestens fünf Kreuze</b> in dieser Farbreihe gemacht haben. Kreuzt er schließlich die Zahl ganz rechts an, dann kreuzt er <b>zusätzlich</b> noch das Feld direkt daneben mit dem Schloss an – dieses Kreuz wird später bei der Endabrechnung mitgezählt! Diese Farbreihe ist nun <b>für alle Spieler</b> abgeschlossen und es kann in dieser Farbe in den folgenden Runden nichts mehr angekreuzt werden. Der zugehörige Farbwürfel wird sofort aus dem Spiel entfernt und nicht weiter benötigt.</p>
+            <p>Möchte ein Spieler <b>die Zahl ganz rechts</b> in einer Farbreihe ankreuzen (rote 12, gelbe 12, grüne 2, blaue 2), dann muss er vorher <b>mindestens fünf Kreuze</b> in dieser Farbreihe gemacht haben. Kreuzt er schließlich die Zahl ganz rechts an, dann wird <b>zusätzlich</b> noch das Feld direkt daneben mit dem Schloss angekreuzt – dieses Kreuz wird später bei der Endabrechnung mitgezählt! Diese Farbreihe ist nun <b>für alle Spieler</b> abgeschlossen und es kann in dieser Farbe in den folgenden Runden nichts mehr angekreuzt werden. Der zugehörige Farbwürfel wird sofort aus dem Spiel entfernt und nicht weiter benötigt.</p>
             <p>
               <img src="img/rule-examples/classic/closed-green-row.png" class="img-responsive" alt="">
               <img src="img/rule-examples/classic/remove-green-dice.png" class="img-responsive" alt="">
-              <i>Beispiel: Laura kreuzt die grüne 2 und zusätzlich das Schloss an. Der grüne Würfel wird aus dem Spiel entfernt.</i>
+              <i>Beispiel: Laura kreuzt die grüne 2 an, es wird zusätzlich das Schloss angekreuzt. Der grüne Würfel wird aus dem Spiel entfernt.</i>
             </p>
-            <p class="bg-warning">Beachte: Kreuzt ein Spieler die Zahl ganz rechts an, dann muss er dies laut und deutlich ansagen, damit alle Spieler wissen, dass diese Farbreihe nun abgeschlossen wird. Falls das Abschließen der Reihe während der 1. Aktion geschieht, können gegebenenfalls nämlich gleichzeitig auch andere Spieler diese Reihe noch abschließen und ebenfalls das Schloss ankreuzen. Hat ein Spieler bisher weniger als fünf Kreuze in der Farbreihe, dann darf er das Feld ganz rechts auf keinen Fall ankreuzen, auch wenn die Reihe von einem anderen Spieler abgeschlossen wird.</p>
+            <p class="bg-warning">Beachte: Kreuzt ein Spieler die Zahl ganz rechts an, dann muss er dies laut und deutlich ansagen, damit alle Spieler wissen, dass diese Farbreihe nun abgeschlossen wird. Falls das Abschließen der Reihe während der 1. Aktion geschieht, können gegebenenfalls nämlich gleichzeitig auch andere Spieler diese Reihe noch abschließen. Hat ein Spieler bisher weniger als fünf Kreuze in der Farbreihe, dann darf er das Feld ganz rechts auf keinen Fall ankreuzen, auch wenn die Reihe von einem anderen Spieler abgeschlossen wird.</p>
 
             <h5>Spielende</h5>
             <p>Das Spiel endet <b>sofort</b>, wenn jemand seinen vierten Fehlwurf angekreuzt hat. Außerdem endet das Spiel <b>sofort</b>, wenn (egal von welchen Spielern) zwei Reihen abgeschlossen und somit zwei Farbwürfel entfernt wurden.</p>
             <p class="bg-info">Hinweis: Es kann (während der 1. Aktion) passieren, dass gleichzeitig mit der zweiten Reihe auch eine dritte Reihe abgeschlossen wird.</p>
-            <p><i>Beispiel: Die grüne Reihe wurde bereits abgeschlossen. Nun würfelt Emma mit den weißen Würfeln zwei 6en und sagt „zwölf“ an. Max kreuzt die rote 12 an und schließt die rote Reihe ab. Gleichzeitig kreuzt Linus die gelbe 12 an und schließt die gelbe Reihe ab.</i></p>
+            <p><i>Beispiel: Die grüne Reihe wurde bereits abgeschlossen. Nun würfelt Emma mit den weißen Würfeln zwei 6en und sagt "zwölf" an. Max kreuzt die rote 12 an und schließt die rote Reihe ab. Gleichzeitig kreuzt Linus die gelbe 12 an und schließt die gelbe Reihe ab.</i></p>
 
             <h5>Wertung</h5>
-            <p>Unterhalb der vier Farbreihen ist angegeben, wie viele Punkte es für wie viele Kreuze innerhalb einer Reihe gibt. Jeder Fehlwurf zählt fünf Minuspunkte. Nun trägt jeder Spieler die Punkte für seine vier Farbreihen und die Minuspunkte für die Fehlwürfe unten auf dem Zettel in die entsprechenden Felder ein. Der Spieler mit dem höchsten Gesamtergebnis ist Sieger.</p>
+            <p>Unterhalb der vier Farbreihen und Fehlwürfe ist angegeben, wie viele Punkte der Spieler für die Farben, Fehlwürfe und als Gesamtergebnis hat. Der Spieler mit dem höchsten Gesamtergebnis ist Sieger.</p>
             <p>
               <img src="img/rule-examples/classic/score.png" class="img-responsive" alt="">
               <i>Beispiel: In Rot hat Laura 4 Kreuze, das gibt 10 Punkte, in Gelb drei Kreuze (= 6 Punkte), in Grün 7 Kreuze (= 28 Punkte) und in Blau 8 Kreuze (= 36 Punkte). Für ihre beiden Fehlwürfe bekommt Laura 10 Minuspunkte. Lauras Gesamtergebnis lautet somit 70 Punkte.</i>
@@ -112,7 +111,7 @@
             <h5>Noch ein Tipp...</h5>
             <p class="clearfix">
               <img src="img/rule-examples/mixed/qwixx-cards.png" class="img-responsive pull-left" alt="">
-              Man kann die „Qwixx gemixxt“-Blöcke auch für das <b>Qwixx-Kartenspiel</b> verwenden. Alle Regeln des Kartenspieles bleiben unverändert, mit den oben beschriebenen Ergänzungen.
+              Man kann die "Qwixx gemixxt"-Blöcke auch für das <b>Qwixx-Kartenspiel</b> verwenden. Alle Regeln des Kartenspieles bleiben unverändert, mit den oben beschriebenen Ergänzungen.
             </p>
             <p>Außerdem gilt: Wenn der aktive Spieler mehrere Karten ausspielt (sie müssen die gleiche Farbe haben), dann darf er in verschiedenen Reihen Kreuze machen.</p>
             <p><i>Beispiel: Tim spielt die rote 3, die rote 8 und die rote 11 aus. Die rote 3 kreuzt er in der zweiten Reihe an und die rote 8 in der vierten Reihe. Die rote 11 möchte er nicht ankreuzen.</i></p>
@@ -129,7 +128,7 @@
             <h5>Noch ein Tipp...</h5>
             <p class="clearfix">
               <img src="img/rule-examples/mixed/qwixx-cards.png" class="img-responsive pull-left" alt="">
-              Man kann die „Qwixx gemixxt“-Blöcke auch für das <b>Qwixx-Kartenspiel</b> verwenden. Alle Regeln des Kartenspieles bleiben unverändert, mit den oben beschriebenen Ergänzungen.
+              Man kann die "Qwixx gemixxt"-Blöcke auch für das <b>Qwixx-Kartenspiel</b> verwenden. Alle Regeln des Kartenspieles bleiben unverändert, mit den oben beschriebenen Ergänzungen.
             </p>
 
           </div>
@@ -139,7 +138,7 @@
             <p>Für die beiden Bonusreihen selbst (runde Felder) gibt es keine Punkte. <b>Aber:</b> Angekreuzte Bonusfelder zählen für <b>beide</b> benachbarten Farbreihen mit. Auf diese Weise kann man sehr viele Kreuze pro Farbreihe werten und sehr viele Punkte pro Farbreihe machen (maximal 120).</p>
 
             <h5>Wie werden die Bonusfelder angekreuzt?</h5>
-            <p>Hat man ein normales Farbfeld angekreuzt (z.B. die grüne 10), darf man fortan, wenn man diese Zahl erneut würfelt (also wieder eine grüne 10), das benachbarte zweifarbige Bonusfeld ankreuzen. Das gilt auch für den Fall, dass man eine entsprechende „weiße Zahl“ (weiße 10) nutzt. Es ist nicht möglich, ein Bonusfeld anzukreuzen, wenn man nicht <b>vorher</b> mindestens ein benachbartes Farbfeld angekreuzt hat.</p>
+            <p>Hat man ein normales Farbfeld angekreuzt (z.B. die grüne 10), darf man fortan, wenn man diese Zahl erneut würfelt (also wieder eine grüne 10), das benachbarte zweifarbige Bonusfeld ankreuzen. Das gilt auch für den Fall, dass man eine entsprechende "weiße Zahl" (weiße 10) nutzt. Es ist nicht möglich, ein Bonusfeld anzukreuzen, wenn man nicht <b>vorher</b> mindestens ein benachbartes Farbfeld angekreuzt hat.</p>
             <p class="clearfix">
               <img src="img/rule-examples/bigpoints/enable-numbers.png" class="img-responsive pull-left" alt="">
               <i>Sarah hat die gelbe 3 und die rote 5 angekreuzt. Sollte sie selbst noch einmal eine gelbe 3 oder eine rote 5 würfeln, darf sie in dieser Aktion das benachbarte Bonusfeld ankreuzen. Das kann sie ebenfalls tun, wenn sie selbst (oder ein Mitspieler!) eine weiße 3 oder eine weiße 5 würfelt.</i>
@@ -147,7 +146,7 @@
 
             <h5>Was muss man noch beachten?</h5>
             <ul>
-              <li>Auch für die beiden Bonusreihen gilt grundsätzlich: Es <b>muss</b> von links nach rechts angekreuzt werden und ausgelassene Bonusfelder dürfen nachträglich <b>nicht</b> mehr angekreuzt werden.</li>
+              <li>Auch für die beiden Bonusreihen gilt grundsätzlich: Es <b>muss</b> von links nach rechts angekreuzt werden und ausgelassene Bonusfelder können nachträglich <b>nicht</b> mehr angekreuzt werden.</li>
               <li>Eine Farbreihe kann, wie gehabt, mit dem (mindestens) 6. Kreuz in dieser Farbreihe geschlossen werden, wenn man damit das Feld ganz rechts ankreuzt. Die angekreuzten Bonusfelder werden hierbei <b>nicht</b> berücksichtigt, also für das Schließen der Farbreihe  (mind. 6. Kreuz) nicht mitgezählt.</li>
               <li>Sollte eine Farbreihe geschlossen werden (z.B. Grün), kann man weiterhin, wie beschrieben, die benachbarten Bonusfelder ankreuzen. Die auf diese Weise noch angekreuzten Bonusfelder zählen für <b>beide</b> benachbarten Farbreihen mit - gewertet wird erst ganz zum Schluß.</li>
               <li>Sollte der aktive Spieler in seinen beiden Aktionen lediglich ein Bonusfeld ankreuzen, so gilt dies nicht als Fehlwurf.</li>
