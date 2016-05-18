@@ -54,7 +54,7 @@
             <p>Im Spielverlauf müssen die Zahlen in jeder der vier Farbreihen grundsätzlich <b>von links nach rechts</b> angekreuzt werden. Man muss nicht ganz links beginnen – es ist erlaubt, dass man Zahlen auslässt (auch mehrere auf einmal). Ausgelassene Zahlen können nachträglich nicht mehr angekreuzt werden.</p>
             <p>
               <img src="img/rule-examples/classic/mark-numbers.png" class="img-responsive" alt="">
-              <i>Beispiel: <b>In der roten Reihe</b> wurde zuerst die 5 und später die 7 angekreuzt. Die rote 2, 3, 4 und 6 dürfen nachträglich nicht mehr angekreuzt werden. <b>In der gelben Reihe</b> kann nur noch die 11 und die 12 angekreuzt werden. <b>In der grünen Reihe</b> muss rechts von der 6 weitergemacht werden. <b>In der blauen Reihe</b> muss rechts von der 10 weitergemacht werden.</i>
+              <i>Beispiel: <b>In der roten Reihe</b> wurde zuerst die 5 und später die 7 angekreuzt. Die rote 2, 3, 4 und 6 dürfen nachträglich nicht mehr angekreuzt werden. <b>In der gelben Reihe</b> kann nur noch die 11 und die 12 angekreuzt werden. <b>In der grünen Reihe</b> muss bei der 5 weitergemacht werden. <b>In der blauen Reihe</b> muss bei der 9 weitergemacht werden.</i>
             </p>
 
             <h5>Spielablauf</h5>
