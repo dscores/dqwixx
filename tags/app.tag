@@ -198,13 +198,15 @@
             <li>Sollte eine Farbreihe geschlossen werden (z.B. Grün), kann man weiterhin, wie beschrieben, die benachbarten Bonusfelder ankreuzen. Die auf diese Weise noch angekreuzten Bonusfelder zählen für <b>beide</b> benachbarten Farbreihen mit - gewertet wird erst ganz zum Schluß.</li>
             <li>Sollte der aktive Spieler in seinen beiden Aktionen lediglich ein Bonusfeld ankreuzen, so gilt dies nicht als Fehlwurf.</li>
           </ul>
+
+          <h4>Wertung</h4>
           <p>
             <div class="row">
               <div class="col-xs-6">
                 <img src="img/rule-examples/bigpoints/score.png" class="img-responsive" alt="">
               </div>
               <div class="col-xs-6">
-                <i>Wertungsbeispiel: Sarah hat 3 rot-gelbe Bonusfelder angekreuzt. Diese 3 Kreuze zählen sowohl für die rote als auch für die gelbe Farbreihe. Außerdem hat Sarah 4 grün-blaue Bonusfelder angekreuzt. Diese 4 Kreuze zählen sowohl für die grüne als auch für die blaue Farbreihe mit.</i>
+                <i>Beispiel: Sarah hat 3 rot-gelbe Bonusfelder angekreuzt. Diese 3 Kreuze zählen sowohl für die rote als auch für die gelbe Farbreihe. Außerdem hat Sarah 4 grün-blaue Bonusfelder angekreuzt. Diese 4 Kreuze zählen sowohl für die grüne als auch für die blaue Farbreihe mit.</i>
               </div>
             </div>
           </p>
