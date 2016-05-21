@@ -1,5 +1,6 @@
 {
   "copyfiles": [
+    "www/img/rule-examples/*",
     "www/vendor/bootstrap/dist/css/bootstrap.min.css",
     "www/vendor/bootstrap/dist/fonts/*",
     "www/vendor/bootstrap/dist/js/bootstrap.min.js",
