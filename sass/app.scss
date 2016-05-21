@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'modal';
 @import 'margins';
 @import 'orientation';
 
@@ -19,8 +20,8 @@
   border-radius: 50%;
 }
 
-.revert, .theme, .refresh {
-  font-size: 2.5vmin;
+.revert, .rules, .theme, .refresh {
+  font-size: 2.2vmin;
 }
 
 .badge {
@@ -28,6 +29,6 @@
   font-weight: bold;
 }
 
-.finished .btn:not(.revert):not(.theme):not(.refresh), .disabled, .marked, .skipped, .locked, .failed, .points, .active, .empty {
+.finished .btn:not(.revert):not(.rules):not(.theme):not(.refresh), .disabled, .marked, .skipped, .locked, .failed, .points, .active, .empty {
   pointer-events: none;
 }

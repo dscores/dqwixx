@@ -1,0 +1,3 @@
+classic: http://www.nsv.de/spielregeln/qwixx-classic.pdf
+mixed: http://www.nsv.de/spielregeln/qwixx-gemixxt.pdf
+bigPoints: http://www.nsv.de/spielregeln/qwixx-big-points-deutsch.pdf
