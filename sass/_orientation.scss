@@ -1,13 +1,13 @@
 html, body, .container-fluid {
   height: 100%;
-}
 
-:not(.bigPoints) .row {
-  height: calc(100% / 7);
-}
+  :not(.bigPoints) .row {
+    height: calc(100% / 7);
+  }
 
-.bigPoints .row {
-  height: calc(100% / 9);
+  .bigPoints .row {
+    height: calc(100% / 9);
+  }
 }
 
 @media all and (orientation:portrait) {
@@ -28,13 +28,13 @@ html, body, .container-fluid {
   .container-fluid {
     width: 100vh;
     height: 100vw;
-  }
 
-  :not(.bigPoints) .row {
-    height: calc(100vw / 7);
-  }
+    :not(.bigPoints) .row {
+      height: calc(100vw / 7);
+    }
 
-  .bigPoints .row {
-    height: calc(100vw / 9);
+    .bigPoints .row {
+      height: calc(100vw / 9);
+    }
   }
 }

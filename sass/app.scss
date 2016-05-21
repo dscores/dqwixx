@@ -3,9 +3,11 @@
 @import 'margins';
 @import 'orientation';
 
-.row {
-  display: flex;
-  display: -webkit-flex;
+.container-fluid {
+  .row {
+    display: flex;
+    display: -webkit-flex;
+  }
 }
 
 .btn {
