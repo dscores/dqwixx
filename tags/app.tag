@@ -500,6 +500,33 @@
       .join('-');
   };
 
+  var historySize = 3;
+  var history = {
+    push: function (currentJson) {
+      var historyString = localStorage.getItem('dqwixx-history');
+      var historyJson = [];
+      if (historyString) {
+        var historyJson = JSON.parse(historyString);
+      }
+      historyJson.push(currentJson);
+      historyJson = historyJson.slice(-historySize);
+      localStorage.setItem('dqwixx-history', JSON.stringify(historyJson));
+    },
+    pop: function () {
+      var historyString = localStorage.getItem('dqwixx-history');
+      if (historyString) {
+        var historyJson = JSON.parse(historyString);
+        var currentJson = historyJson.pop();
+        if (historyJson.length === 0) {
+          localStorage.removeItem('dqwixx-history');
+        } else {
+          localStorage.setItem('dqwixx-history', JSON.stringify(historyJson));
+        }
+        return currentJson;
+      }
+    }
+  };
+
   this.board = new Dqwixx.Board();
 
   var currentString = localStorage.getItem('dqwixx-current');
@@ -514,7 +541,7 @@
 
   this.clickNumber = function (rowIndex, numberIndex) {
     return function () {
-      localStorage.setItem('dqwixx-before', localStorage.getItem('dqwixx-current'));
+      history.push({ board: this.board, theme: this.theme });
       this.board.markNumber(rowIndex, numberIndex);
       localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
     };
@@ -522,7 +549,7 @@
 
   this.clickLock = function (rowIndex) {
     return function () {
-      localStorage.setItem('dqwixx-before', localStorage.getItem('dqwixx-current'));
+      history.push({ board: this.board, theme: this.theme });
       this.board.closeRow(rowIndex);
       localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
     };
@@ -530,23 +557,21 @@
 
   this.clickFail = function (failIndex) {
     return function () {
-      localStorage.setItem('dqwixx-before', localStorage.getItem('dqwixx-current'));
+      history.push({ board: this.board, theme: this.theme });
       this.board.failFail(failIndex);
       localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
     };
   };
 
   this.isRevertable = function () {
-    return localStorage.getItem('dqwixx-before');
+    return localStorage.getItem('dqwixx-history');
   };
 
   this.clickRevert = function () {
-    var beforeString = localStorage.getItem('dqwixx-before');
-    var beforeJson = JSON.parse(beforeString);
-    this.board.resume(beforeJson.board);
-    this.theme = beforeJson.theme;
-    localStorage.setItem('dqwixx-current', beforeString);
-    localStorage.removeItem('dqwixx-before');
+    var current = history.pop();
+    this.board.resume(current.board);
+    this.theme = current.theme;
+    localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
   };
 
   this.clickTheme = function (theme) {
@@ -554,7 +579,7 @@
       if (theme === this.theme) {
         return;
       }
-      localStorage.setItem('dqwixx-before', localStorage.getItem('dqwixx-current'));
+      history.push({ board: this.board, theme: this.theme });
       this.board = Dqwixx.themes[theme](new Dqwixx.Board());
       this.theme = theme;
       localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
@@ -562,7 +587,7 @@
   };
 
   this.clickRefresh = function () {
-    localStorage.setItem('dqwixx-before', localStorage.getItem('dqwixx-current'));
+    history.push({ board: this.board, theme: this.theme });
     this.board = Dqwixx.themes[this.theme](new Dqwixx.Board());
     localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
   };
