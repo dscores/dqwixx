@@ -1,19 +1,23 @@
 $darken: 30%;
 $lighten: 30%;
 
-@mixin colors($color) {
+@mixin numberColor($color) {
+  background-color: $color;
   color: white;
+}
 
+
+@mixin colors($color) {
   &.open {
-    background-color: $color;
+    @include numberColor($color);
   }
 
   &.marked, &.locked, &.failed {
-    background-color: darken($color, $darken);
+    @include numberColor(darken($color, $darken));
   }
 
   &.skipped, &.disabled {
-    background-color: lighten($color, $lighten);
+    @include numberColor(lighten($color, $lighten));
     opacity: 1;
   }
 
@@ -51,11 +55,10 @@ $lighten: 30%;
 @mixin bigPointColor($colorA, $colorB) {
   background-image: -webkit-linear-gradient(top, $colorA, $colorA 50%, $colorB 50%);
   background-image: linear-gradient(to bottom, $colorA, $colorA 50%, $colorB 50%);
+  color: white;
 }
 
 @mixin bigPointColors($colorA, $colorB) {
-  color: white;
-
   &.open {
     &.markedLinkedRowIndex0 {
       @include bigPointColor($colorA, lighten($colorB, $lighten));
