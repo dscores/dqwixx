@@ -2,11 +2,6 @@
   &.open {
     background-color: $color;
     color: white;
-
-    &:hover {
-      background-color: darken($color, 10%);
-      color: white;
-    }
   }
 
   &.marked, &.locked, &.failed {
@@ -17,6 +12,12 @@
   &.skipped {
     background-color: lighten($color, 20%);
     color: white;
+  }
+
+  &.disabled {
+    background-color: lighten($color, 15%);
+    color: white;
+    opacity: 1;
   }
 
   &.points {
@@ -60,8 +61,13 @@
     @include bigPointColor($colorA, $colorB);
     color: white;
 
-    &:hover {
-      @include bigPointColor(darken($colorA, 10%), darken($colorB, 10%));
+    &.markedLinkedRowIndex0 {
+      @include bigPointColor($colorA, lighten($colorB, 15%));
+      color: white;
+    }
+
+    &.markedLinkedRowIndex1 {
+      @include bigPointColor(lighten($colorA, 15%), $colorB);
       color: white;
     }
   }
@@ -74,6 +80,12 @@
   &.skipped {
     @include bigPointColor(lighten($colorA, 20%), lighten($colorB, 20%));
     color: white;
+  }
+
+  &.disabled {
+    @include bigPointColor(lighten($colorA, 15%), lighten($colorB, 15%));
+    color: white;
+    opacity: 1;
   }
 }
 
