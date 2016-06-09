@@ -1,22 +1,19 @@
+$darken: 30%;
+$lighten: 30%;
+
 @mixin colors($color) {
+  color: white;
+
   &.open {
     background-color: $color;
-    color: white;
   }
 
   &.marked, &.locked, &.failed {
-    background-color: darken($color, 30%);
-    color: white;
+    background-color: darken($color, $darken);
   }
 
-  &.skipped {
-    background-color: lighten($color, 20%);
-    color: white;
-  }
-
-  &.disabled {
-    background-color: lighten($color, 15%);
-    color: white;
+  &.skipped, &.disabled {
+    background-color: lighten($color, $lighten);
     opacity: 1;
   }
 
@@ -57,34 +54,28 @@
 }
 
 @mixin bigPointColors($colorA, $colorB) {
-  &.open {
-    @include bigPointColor($colorA, $colorB);
-    color: white;
+  color: white;
 
+  &.open {
     &.markedLinkedRowIndex0 {
-      @include bigPointColor($colorA, lighten($colorB, 15%));
-      color: white;
+      @include bigPointColor($colorA, lighten($colorB, $lighten));
     }
 
     &.markedLinkedRowIndex1 {
-      @include bigPointColor(lighten($colorA, 15%), $colorB);
-      color: white;
+      @include bigPointColor(lighten($colorA, $lighten), $colorB);
+    }
+
+    &.markedLinkedRowIndex0-markedLinkedRowIndex1 {
+      @include bigPointColor($colorA, $colorB);
     }
   }
 
   &.marked {
-    @include bigPointColor(darken($colorA, 30%), darken($colorB, 30%));
-    color: white;
+    @include bigPointColor(darken($colorA, $darken), darken($colorB, $darken));
   }
 
-  &.skipped {
-    @include bigPointColor(lighten($colorA, 20%), lighten($colorB, 20%));
-    color: white;
-  }
-
-  &.disabled {
-    @include bigPointColor(lighten($colorA, 15%), lighten($colorB, 15%));
-    color: white;
+  &.skipped, &.disabled {
+    @include bigPointColor(lighten($colorA, $lighten), lighten($colorB, $lighten));
     opacity: 1;
   }
 }
