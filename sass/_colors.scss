@@ -1,22 +1,24 @@
+$darken: 30%;
+$lighten: 30%;
+
+@mixin numberColor($color) {
+  background-color: $color;
+  color: white;
+}
+
+
 @mixin colors($color) {
   &.open {
-    background-color: $color;
-    color: white;
-
-    &:hover {
-      background-color: darken($color, 10%);
-      color: white;
-    }
+    @include numberColor($color);
   }
 
   &.marked, &.locked, &.failed {
-    background-color: darken($color, 30%);
-    color: white;
+    @include numberColor(darken($color, $darken));
   }
 
-  &.skipped {
-    background-color: lighten($color, 20%);
-    color: white;
+  &.skipped, &.disabled {
+    @include numberColor(lighten($color, $lighten));
+    opacity: 1;
   }
 
   &.points {
@@ -53,27 +55,31 @@
 @mixin bigPointColor($colorA, $colorB) {
   background-image: -webkit-linear-gradient(top, $colorA, $colorA 50%, $colorB 50%);
   background-image: linear-gradient(to bottom, $colorA, $colorA 50%, $colorB 50%);
+  color: white;
 }
 
 @mixin bigPointColors($colorA, $colorB) {
   &.open {
-    @include bigPointColor($colorA, $colorB);
-    color: white;
+    &.markedLinkedRowIndex0 {
+      @include bigPointColor($colorA, lighten($colorB, $lighten));
+    }
 
-    &:hover {
-      @include bigPointColor(darken($colorA, 10%), darken($colorB, 10%));
-      color: white;
+    &.markedLinkedRowIndex1 {
+      @include bigPointColor(lighten($colorA, $lighten), $colorB);
+    }
+
+    &.markedLinkedRowIndex0-markedLinkedRowIndex1 {
+      @include bigPointColor($colorA, $colorB);
     }
   }
 
   &.marked {
-    @include bigPointColor(darken($colorA, 30%), darken($colorB, 30%));
-    color: white;
+    @include bigPointColor(darken($colorA, $darken), darken($colorB, $darken));
   }
 
-  &.skipped {
-    @include bigPointColor(lighten($colorA, 20%), lighten($colorB, 20%));
-    color: white;
+  &.skipped, &.disabled {
+    @include bigPointColor(lighten($colorA, $lighten), lighten($colorB, $lighten));
+    opacity: 1;
   }
 }
 

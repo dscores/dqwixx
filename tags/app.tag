@@ -1,7 +1,7 @@
 <app>
   <div class="container-fluid { finished: board.isFinished() } { theme }">
     <div each={ row, rowIndex in board.getRows() } class="row">
-      <button each={ number, numberIndex in row.getNumbers() } ontouchstart={ clickNumber(rowIndex, numberIndex) } onclick={ clickNumber(rowIndex, numberIndex) } class="btn { number.getColor() } number { open: number.isNumberOpen(), marked: number.isNumberMarked(), skipped: number.isNumberSkipped(), disabled: row.isNumberDisabled(numberIndex) }">
+      <button each={ number, numberIndex in row.getNumbers() } ontouchstart={ clickNumber(rowIndex, numberIndex) } onclick={ clickNumber(rowIndex, numberIndex) } class="btn { number.getColor() } number { open: number.isNumberOpen(), marked: number.isNumberMarked(), skipped: number.isNumberSkipped(), disabled: row.isNumberDisabled(numberIndex) } { formatMarkedLinkedRowIndexes(row.getMarkedLinkedRowIndexes(numberIndex)) }">
         <span class={ hidden: number.isNumberMarked() }>{ number.getLabel() }</span>
         <span class="glyphicon glyphicon-remove { hidden: !number.isNumberMarked() }"></span>
       </button>
@@ -491,6 +491,14 @@
       </div>
     </div>
   </div>
+
+  this.formatMarkedLinkedRowIndexes = function (markedLinkedRowIndexes) {
+    return markedLinkedRowIndexes
+      .map(function (markedLinkedRowIndex) {
+        return 'markedLinkedRowIndex' + markedLinkedRowIndex;
+      })
+      .join('-');
+  };
 
   this.board = new Dqwixx.Board();
 

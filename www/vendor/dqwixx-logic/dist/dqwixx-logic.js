@@ -351,6 +351,20 @@ var Row = (function () {
         }
         return this.isLastNumber(numberIndex) && this.countNumbersMarked() < 5;
     };
+    Row.prototype.getMarkedLinkedRowIndexes = function (numberIndex) {
+        if (this.isBigPoints()) {
+            var markedLinkedRowIndexes = [];
+            var linkedRows = this.getLinkedRows();
+            for (var linkedRowIndex in linkedRows) {
+                var linkedRow = linkedRows[linkedRowIndex];
+                if (linkedRow.getNumbers()[numberIndex].isNumberMarked()) {
+                    markedLinkedRowIndexes.push(linkedRowIndex);
+                }
+            }
+            return markedLinkedRowIndexes;
+        }
+        return [];
+    };
     Row.prototype.getLastNumber = function () {
         var numbers = this.getNumbers();
         return numbers[numbers.length - 1];
