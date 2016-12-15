@@ -541,28 +541,28 @@
 
   this.clickNumber = function (rowIndex, numberIndex) {
     return function () {
-      preventDefault();
       history.push({ board: this.board, theme: this.theme });
       this.board.markNumber(rowIndex, numberIndex);
       localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
+      preventDefault();
     };
   };
 
   this.clickLock = function (rowIndex) {
     return function () {
-      preventDefault();
       history.push({ board: this.board, theme: this.theme });
       this.board.closeRow(rowIndex);
       localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
+      preventDefault();
     };
   };
 
   this.clickFail = function (failIndex) {
     return function () {
-      preventDefault();
       history.push({ board: this.board, theme: this.theme });
       this.board.failFail(failIndex);
       localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
+      preventDefault();
     };
   };
 
@@ -571,16 +571,15 @@
   };
 
   this.clickRevert = function () {
-    preventDefault();
     var current = history.pop();
     this.board.resume(current.board);
     this.theme = current.theme;
     localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
+    preventDefault();
   };
 
   this.clickTheme = function (theme) {
     return function () {
-      preventDefault();
       if (theme === this.theme) {
         return;
       }
@@ -588,13 +587,14 @@
       this.board = Dqwixx.themes[theme](new Dqwixx.Board());
       this.theme = theme;
       localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
+      preventDefault();
     };
   };
 
   this.clickRefresh = function () {
-    preventDefault();
     history.push({ board: this.board, theme: this.theme });
     this.board = Dqwixx.themes[this.theme](new Dqwixx.Board());
     localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
+    preventDefault();
   };
 </app>
