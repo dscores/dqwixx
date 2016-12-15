@@ -540,29 +540,29 @@
   }
 
   this.clickNumber = function (rowIndex, numberIndex) {
-    return function () {
+    return function (e) {
       history.push({ board: this.board, theme: this.theme });
       this.board.markNumber(rowIndex, numberIndex);
       localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
-      preventDefault();
+      e.preventDefault();
     };
   };
 
   this.clickLock = function (rowIndex) {
-    return function () {
+    return function (e) {
       history.push({ board: this.board, theme: this.theme });
       this.board.closeRow(rowIndex);
       localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
-      preventDefault();
+      e.preventDefault();
     };
   };
 
   this.clickFail = function (failIndex) {
-    return function () {
+    return function (e) {
       history.push({ board: this.board, theme: this.theme });
       this.board.failFail(failIndex);
       localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
-      preventDefault();
+      e.preventDefault();
     };
   };
 
@@ -570,16 +570,16 @@
     return localStorage.getItem('dqwixx-history');
   };
 
-  this.clickRevert = function () {
+  this.clickRevert = function (e) {
     var current = history.pop();
     this.board.resume(current.board);
     this.theme = current.theme;
     localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
-    preventDefault();
+    e.preventDefault();
   };
 
   this.clickTheme = function (theme) {
-    return function () {
+    return function (e) {
       if (theme === this.theme) {
         return;
       }
@@ -587,14 +587,14 @@
       this.board = Dqwixx.themes[theme](new Dqwixx.Board());
       this.theme = theme;
       localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
-      preventDefault();
+      e.preventDefault();
     };
   };
 
-  this.clickRefresh = function () {
+  this.clickRefresh = function (e) {
     history.push({ board: this.board, theme: this.theme });
     this.board = Dqwixx.themes[this.theme](new Dqwixx.Board());
     localStorage.setItem('dqwixx-current', JSON.stringify({ board: this.board, theme: this.theme }));
-    preventDefault();
+    e.preventDefault();
   };
 </app>
