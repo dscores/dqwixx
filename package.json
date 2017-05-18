@@ -1,6 +1,6 @@
 {
   "name": "dqwixx",
-  "description": "",
+  "description": "Interactive digital score for Qwixx",
   "version": "1.0.0",
   "homepage": "http://github.com/dscores/dqwixx",
   "private": true,
